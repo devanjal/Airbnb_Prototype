@@ -1,0 +1,94 @@
+<div class="panel-padding panel-body signup-login-form__extra-panel-body first login-modal-content-js">
+    <div uib-alert ng-repeat="alert in loginalerts" ng-class="'alert-' + (alert.type || 'warning')" dismiss-on-timeout=5000
+        close="closeLoginAlert($index)" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true" style="margin-right:5px"></span> {{alert.msg}}
+    </div>
+    <form accept-charset="UTF-8" action="/oauth_connect?from=facebook_login&amp;service=facebook" method="post">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="V4$.airbnb.com$8L_B87z64z0$H6CNEKyBiTuZO_-JVVOm4cEv0CYmbVNlUf4Vx1mYrbE="></div>
+        <button class="btn icon-btn btn-block signup-login-form__btn-xl btn-large space-1 btn-facebook js-facebook-auth" name="button"
+            type="submit">
+            <span class="icon-container">
+            <i class="icon icon-facebook"></i>
+            </span>
+            <span class="text-container">
+            Log in with Facebook
+            </span>
+        </button>
+    </form>
+
+
+    <form accept-charset="UTF-8" action="/oauth_connect?from=google_login&amp;service=google" method="post">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="V4$.airbnb.com$8L_B87z64z0$H6CNEKyBiTuZO_-JVVOm4cEv0CYmbVNlUf4Vx1mYrbE="></div>
+        <button class="btn icon-btn btn-block signup-login-form__btn-xl btn-large space-1 btn-google js-google-auth" name="button"
+            type="submit">
+        <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-google-image">
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="super-g">
+                    <path d="M9,3.48 C10.69,3.48 11.83,4.21 12.48,4.82 L15.02,2.34 C13.46,0.89 11.43,0 9,0 C5.48,0 2.44,2.02 0.96,4.96 L3.87,7.22 C4.6,5.05 6.62,3.48 9,3.48 L9,3.48 L9,3.48 Z" id="Shape" fill="#EA4335"></path>
+                    <path d="M17.64,9.2 C17.64,8.46 17.58,7.92 17.45,7.36 L9,7.36 L9,10.7 L13.96,10.7 C13.86,11.53 13.32,12.78 12.12,13.62 L14.96,15.82 C16.66,14.25 17.64,11.94 17.64,9.2 L17.64,9.2 L17.64,9.2 Z" id="Shape" fill="#4285F4"></path>
+                    <path d="M3.88,10.78 C3.69,10.22 3.58,9.62 3.58,9 C3.58,8.38 3.69,7.78 3.87,7.22 L0.96,4.96 C0.35,6.18 0,7.55 0,9 C0,10.45 0.35,11.82 0.96,13.04 L3.88,10.78 L3.88,10.78 L3.88,10.78 Z" id="Shape" fill="#FBBC05"></path>
+                    <path d="M9,18 C11.43,18 13.47,17.2 14.96,15.82 L12.12,13.62 C11.36,14.15 10.34,14.52 9,14.52 C6.62,14.52 4.6,12.95 3.88,10.78 L0.97,13.04 C2.45,15.98 5.48,18 9,18 L9,18 L9,18 Z" id="Shape" fill="#34A853"></path>
+                    <path d="M0,0 L18,0 L18,18 L0,18 L0,0 L0,0 Z" id="Shape"></path>
+                </g>
+            </g>
+
+            <image class="google-logo-svg-fallback" src="https://a1.muscache.com/airbnb/static/signinup/google_icon_2x-745c2280e5004d4c90e3ca4e60e3f677.png" xlink:href="">
+            </image>
+        </svg>
+
+        <span class="text-container">
+        Log in with Google
+        </span>
+        </button>
+    </form>
+
+
+    <div class="signup-or-separator">
+        <span style="    margin-top: 0;" class="h6 signup-or-separator--text">or</span>
+        <hr style="    margin: -25px auto 10px;">
+    </div>
+
+    <form class="login-form " method="post" ng-submit="login()">
+        <div style="margin:0;padding:0;display:inline">
+            <input name="utf8" type="hidden" value="✓" />
+            <input name="authenticity_token" type="hidden" value="V4$.airbnb.com$8L_B87z64z0$H6CNEKyBiTuZO_-JVVOm4cEv0CYmbVNlUf4Vx1mYrbE="
+            />
+        </div>
+        <input id="from" name="from" type="hidden" value="email_login">
+        <input id="airlock_id" name="airlock_id" type="hidden" value="">
+
+        <div class="control-group space-1">
+            <input class="decorative-input inspectletIgnore" ng-model="user.username" id="signin_email" name="email" placeholder="Email Address"
+                type="email" required>
+        </div>
+        <div class="control-group space-2">
+            <input class="decorative-input inspectletIgnore" ng-model="user.password" id="signin_password" name="password" placeholder="Password"
+                type="password" required>
+        </div>
+
+        <div class="clearfix space-1">
+            <label style="margin-left: 20px;margin-top: 0;font-weight: normal;" for="remember_me2" class="checkbox remember-me space-1">
+        <input style="margin-top: 0px;" type="checkbox" name="remember_me" id="remember_me2" value="true" class="remember_me">
+        Remember me
+      </label>
+            <a href="/forgot_password" class="forgot-password pull-right" data-from="email">Forgot password?</a>
+        </div>
+        <div id="airlock-inline-container"></div>
+        <button type="submit" class="btn btn-block signup-login-form__btn-xl btn-primary btn-large" id="user-login-btn">
+            Log in
+        </button>
+    </form>
+
+    <hr>
+    <div class="clearfix">
+        <div class="signup-login-form__switch-copy">
+            Don’t have an account?
+        </div>
+        <a href="#" class="modal-link link-to-signup-in-login btn btn-default signup-login-form__btn-rausch-border signup-login-form__switch-button signup-login-form__btn-font-normal"
+            ng-click="openSignup()">
+              Sign up
+        </a>
+    </div>
+</div>

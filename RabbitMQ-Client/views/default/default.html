@@ -1,0 +1,61 @@
+<div class="default" style="padding-top: 48px !important;height:800px" ng-controller="defaultController">
+    <div class="row" style="margin: 0;">
+        <h1 style="width:75% !important;">
+            <span class="livethere">Live there.</span> Book unique homes and experience a city like a local.
+        </h1>
+    </div>
+    <div class="row" style="border: 1px solid #ccc;border-radius: 4px;box-shadow: 0 1px 3px 0 #eee;margin:0;margin-top: 40px !important;">
+        <form>
+
+            <div class="col-xl-12 col-md-4" style="border-right:1px solid lightgray;">
+                <label>Where</label>
+                <input type="text" class="form-control" ng-autocomplete="results2" ng-model="where" placeholder="Destination, city, address" details="details2" options="options2" required />
+            </div>
+            <div class="col-xl-12 col-md-4" style="border-right:1px solid lightgray">
+                <label>When</label>
+                <div class="row">
+
+                    <div class="col-md-5">
+                        <p class="input-group" style="margin-bottom: 0;" >
+                        <input type="text" ng-model="checkin" class="form-control" ng-click="open1()" uib-datepicker-popup is-open="popup1.opened"
+                               datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" placeholder="Check-in"/>
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-md-2">
+                        <svg class="rightarrow" viewBox="0 0 1000 1000" data-reactid=".ldf3n0wrnk.1.0.1.0.0.0.0.1.1.0.1.0">
+                            <path d="M694.4 242.4l249.1 249.1c11 11 11 21 0 32L694.4 772.7c-5 5-10 7-16 7s-11-2-16-7c-11-11-11-21 0-32l210.1-210.1H67.1c-13 0-23-10-23-23s10-23 23-23h805.4L662.4 274.5c-21-21.1 11-53.1 32-32.1z"
+                                data-reactid=".ldf3n0wrnk.1.0.1.0.0.0.0.1.1.0.1.0.0"></path>
+                        </svg>
+                    </div>
+                    <div class="col-md-5" style="padding-left: 0;">
+                        <p class="input-group" style="margin-bottom: 0;">
+                            <input type="text" ng-model="checkout" class="form-control" ng-click="open2()" uib-datepicker-popup is-open="popup2.opened"
+                                   datepicker-options="dateOptions" ng-required="true" close-text="Close"  placeholder="Check out"/>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-12 col-md-4">
+                <div class="row">
+                    <div class="col-md-7">
+                        <label>Guests</label>
+
+                        <select ng-model="guests" ng-options="item for item in dropdown1">
+                        </select>
+                        <svg class="downarrow" viewBox="0 0 18 18" style="fill:currentColor;height:12px;width:12px;display:block;">
+                            <path d="M16.291 4.295a1 1 0 1 1 1.414 1.415l-8 7.995a1 1 0 0 1-1.414 0l-8-7.995a1 1 0 1 1 1.414-1.415l7.293 7.29 7.293-7.29z" ></path></svg>
+                    </div>
+                    <div class="col-md-5" style="padding-top: 14px;">
+                        <button type="submit" ui-sref="searchQuery({location:where,checkout:checkout,checkin:checkin, guests:guests})" class="btn btn-primary searchbtn" ng-click="search()">Search</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,122 @@
+<div class="list-your-space__progress" ng-controller="hostController">
+    <div class="left-backdrop"></div>
+    <div class="right-backdrop hide-sm bg-white right-backdrop--with-bg"></div>
+
+
+    <div class="list-your-space__content">
+        <div class="centered-content clearfix">
+
+            <div class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix">
+
+                <div class="main-panel main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
+
+                    <div class="panel--no-border panel-title">
+                        <h3 class="no-margin-padding">How do you want to set your price?</h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-12 space-top-2">
+                            <fieldset class="mode-chooser">
+                                <label for="list_your_space_pricing_mode-2" class="clearfix mode-chooser__option mode-chooser__option--with-icon">
+                                    <div class="mode-chooser__icon">
+                                        <i class="choose-pricing-mode__icon--smart"></i>
+                                    </div>
+                                    <div class="mode-chooser__text">
+                                        <div class="mode-chooser__heading space-1">
+                                            <span>Price adapts to demand</span>
+                                            <span>&nbsp;</span>
+                                        </div>
+                                        <p class="mode-chooser__subtitle space-0">
+                                            <span>You tell Smart Pricing to automatically adjust your price to match demand, but only within a price range that you set.</span>
+                                        </p>
+                                        <div class="mode-chooser__recommended">
+                                            <span>Recommended</span>
+                                        </div>
+                                    </div>
+                                    <input ng-model="priceMode" class="mode-chooser__input pointer-input" value="bid" type="radio">
+                                </label>
+                                <label for="list_your_space_pricing_mode-1" class="clearfix mode-chooser__option mode-chooser__option--with-icon">
+                                    <div class="mode-chooser__icon">
+                                        <i class="choose-pricing-mode__icon--fixed">
+
+                                        </i>
+                                    </div>
+                                    <div class="mode-chooser__text">
+                                        <div class="mode-chooser__heading space-1">
+                                            <span>Price is fixed</span>
+                                            <span>&nbsp;</span>
+                                        </div>
+                                        <p class="mode-chooser__subtitle space-0">
+                                            <span>Set a base price. Airbnb gives you price tips that you can accept or ignore.</span>
+                                        </p>
+                                    </div>
+                                    <input ng-model="priceMode" class="mode-chooser__input pointer-input" value="fixed" type="radio">
+                                </label>
+                            </fieldset>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="main-panel__actions-wrapper">
+                    <div class="centered-content clearfix">
+                        <div class="bg-white main-panel-outer-half clearfix shadowed">
+                            <div class="no-margin-padding__sm main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
+                                <div class="divider hide-sm">
+
+                                </div>
+                                <div class="row no-margin-padding__sm">
+                                    <div class="main-panel__actions col-sm-12 no-margin-padding__sm">
+                                        <a ui-sref="become-a-host.calendar" class="btn-progress-back link-icon va-container va-container-v pull-left text-gray link--accessibility-outline"
+                                            href="#">
+                                            <span class="icon hide-sm"></span>
+                                            <span class="va-middle">
+                                            <h5 class="text-normal">
+                                                <span>Back</span>
+                                            </h5>
+                                            </span>
+                                        </a>
+                                        <a ng-hide="priceMode === 'bid'" style="border-color: #ff5a5f;background-color: #ff5a5f;" ng-class="{'disabled' : !priceMode}" ng-disabled="!priceMode" ui-sref="become-a-host.price" class="btn btn-large btn-progress-next btn-large__next-btn pull-right-md btn-primary"
+                                            href="#">
+                                            <div class="btn-progress-next__text">
+                                                <span>Next</span>
+                                            </div>
+                                        </a>
+                                        <a ng-show="priceMode === 'bid'" style="border-color: #ff5a5f;background-color: #ff5a5f;" ng-class="{'disabled' : !priceMode}" ng-disabled="!priceMode" ui-sref="become-a-host.bid" class="btn btn-large btn-progress-next btn-large__next-btn pull-right-md btn-primary"
+                                            href="#">
+                                            <div class="btn-progress-next__text">
+                                                <span>Next</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="waypoint-container">
+                    <span style="font-size:0;"></span>
+                </div>
+
+
+            </div>
+
+            <div class="help-panel-container">
+                <div class="hide-sm help-panel panel">
+                    <div class="panel-body">
+                        <div class="help-panel__bulb-img space-2"></div>
+                        <div class="help-panel__text">
+                            <p>
+                                <span>
+                                    The right price can change over time. Whatever you choose, you’ll get personalized price tips.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

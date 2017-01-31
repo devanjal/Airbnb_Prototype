@@ -1,0 +1,127 @@
+div#lys-redesign-div
+{
+    min-height: calc(100vh - 62px);
+    position: relative;
+    box-sizing: border-box;
+}
+
+div.landing-width.bg-white.row.row-condensed.list-your-space__landing-content
+{
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.landing__left-col
+{
+    min-height: calc(100vh - 62px);
+    font-size: 16px;
+}
+.landing__left-col-content
+{
+    margin: 58px 93.5px 100px 100px;
+    max-width: 470px;
+    transition: opacity .25s ease;
+}
+.landing__left-col .landing-step-collection
+{
+    color: #767676;
+    line-height: 1.5;
+    display: block;
+}
+.landing-step-collection
+{
+    transition-duration: .25s;
+}
+.landing__left-col hr
+{
+    margin: 30px 0;
+}
+hr
+{
+    border-color: #f5f5f5;
+    border: 0;
+    border-top: 1px solid #dce0e0;
+}
+
+.lys-vertical-align-middle-container
+{
+    position: relative;
+}
+.landing__left-col .landing-step-collection.step-collection-completed .landing__step-number, .landing__left-col .landing-step-collection.step-collection-completed .landing__step-content-title, .landing__left-col .landing-step-collection.step-collection-completed .landing__step-content-subtitle
+{
+    max-height: 0;
+    visibility: hidden;
+}
+.text-base
+{
+    font-size: 14px;
+}
+.landing__left-col .landing-step-collection.step-collection-completed .h3
+{
+    font-size: 16px;
+    color: #484848;
+    line-height: 1.25;
+}
+.landing__subtitle-width
+{
+    max-width: 430px;
+}
+h3, .h3
+{
+    font-weight: normal;
+}
+.lys-vertical-align-middle
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+.landing__left-col .landing-step-collection .h3
+{
+    color: #484848;
+    line-height: 1.25;
+}
+
+
+div.col-md-5.landing__right-col
+{
+    padding-left: 6px;
+    padding-right: 6px;
+    min-height: calc(100vh - 62px);
+    width: 41.66667%;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+}
+
+div.landing__animation.hide-sm.lys-vertical-align-middle-container
+{
+    min-height: calc(100vh - 61px);
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+div.landing__svg-container.lys-vertical-align-middle
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+

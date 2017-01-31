@@ -1,0 +1,177 @@
+<style>
+    ul,
+    li {
+        list-style-type: none;
+    }
+    
+    td {
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    /*body {
+        background-color: #F0F0F0;
+    }*/
+    
+    .p_color {
+        color: darkgrey;
+        font-size: 12px;
+    }
+    
+    table {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .details {
+        margin-left: 50px;
+    }
+    
+    .container {
+        width: 65%;
+        height: 70%;
+    }
+</style>
+
+<div style="background-color: #f3f5f3;padding: 15px;"  ng-controller="billController">
+    <div class="row" style="margin:0">
+
+        <div class="col-sm-12">
+
+            <div style="display: inline-block;float: left">
+                <h1>Customer Receipt</h1>
+                <p class="p_color">CONFIRMATION CODE: {{}}</p>
+                <p class="p_color">{{}}</p>
+                <p class="p_color">RECEIPT # </p>
+            </div>
+
+            <div style="display: inline-block;float: right">
+                <p class="p_color">AIRBNB</p>
+                <p class="p_color">{{}}</p>
+                <p class="p_color">WWW.AIRBNB.COM/CONTACT</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row" style="margin:0">
+
+        <table class="table" style="border-top: 3px solid darkgrey;">
+            <tr>
+                <td style="border-bottom: 1px solid darkgrey">
+                    <p style="width: 200px;" class="p_color">
+                        <img src="images/name.png" height="46px" width="  46px" />&nbsp; NAME
+                    </p>
+                    <h6 class="details">{{billData.firstname}}</h6>
+                </td>
+                <td style="border-left: 1px solid darkgrey;border-bottom: 1px solid darkgrey">
+                    <p style="width: 200px;" class="p_color">
+                        <img src="images/travel.png" height="44px" width="44px" />&nbsp; TRAVEL&nbsp;DESTINATION
+                    </p>
+                    <h6 class="details">{{billData.city}}, {{billData.state}}</h6>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid darkgrey">
+                    <p style="width: 200px;" class="p_color">
+                        <img src="images/accomodation.png" height="44px" width="44px" />&nbsp; ACCOMODATION&nbsp;ADDRESS
+                    </p>
+                    <h6 class="details">{{billData.address}} <br>{{billData.city}}, {{billData.state}} {{billData.zipcode}}<br>United States</h6>
+                </td>
+                <td style="border-left: 1px solid darkgrey ;border-bottom: 1px solid darkgrey">
+                    <p style="width: 200px;" class="p_color">
+                        <img src="images/property.png" height="44px" width="44px" />&nbsp; PROPERTY
+                    </p>
+                    <h6 class="details">{{billData.title}}</h6>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid darkgrey">
+                    <p style="width: 200px;" class="p_color">
+                        <img src="images/entireHome.png" height="44px" width="44px" />&nbsp; ACCOMODATION&nbsp;TYPE
+                    </p>
+                    <h6 class="details">{{billData.category}}</h6>
+                </td>
+                <td style="border-left: 1px solid darkgrey;border-bottom: 1px solid darkgrey">
+                    <p style="width: 200px;" class="p_color">
+                        <img src="images/guest.png" height="54px" width="44px" />&nbsp; GUESTS
+                    </p>
+                    <h6 class="details">{{billData.quantity}}</h6>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid darkgrey">
+                    <p style="width: 200px;" class="p_color">
+                        <img src="images/checkin.png" height="54px" width="44px" />&nbsp; CHECK&nbsp;IN
+                    </p>
+                    <h6 class="details">{{billData.from_date.split("T")[0]}}</h6>
+                </td>
+                <td style="border-left: 1px solid darkgrey;border-bottom: 1px solid darkgrey">
+                    <p style="width: 200px;" class="p_color">
+                        <img src="images/checkout.png" height="54px" width="44px" />&nbsp; CHECK&nbsp;OUT
+                    </p>
+                    <h6 class="details">{{billData.to_date.split("T")[0]}}</h6>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 3px double darkgrey">
+                    <p style="width: 200px;" class="p_color">
+                        <img src="images/nights.png" height="54px" width="44px" />&nbsp; NIGHTS
+                    </p>
+                    <h6 class="details">{{billData.duration}}</h6>
+                </td>
+                <td style="border-left: 1px solid darkgrey;border-bottom: 3px double darkgrey">
+                    <p style="width: 200px;" class="p_color">
+                        <img src="images/deposit.png" height="54px" width="44px" />&nbsp; SECURITY&nbsp;DEPOSIT
+                    </p>
+                    <h6 class="details">{{billData.security_deposite}}</h6>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="row" style="margin:0">
+        <h1>Payment Details</h1>
+        <br>
+        <table class="table" style="border-top: 3px solid darkgrey;border-bottom: 3px solid darkgrey;">
+            <tr>
+                <td style="border-bottom: 1px solid darkgrey">
+                    <p class="p_color">ACCOMODATIONS</p>
+                </td>
+                <td style="border-left: 1px solid darkgrey;border-bottom: 1px solid darkgrey">
+                    <p>{{billData.amount}}</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid darkgrey">
+                    <p class="p_color">AIRBNB SERVICE FEE</p>
+                </td>
+                <td style="border-left: 1px solid darkgrey ;border-bottom: 1px solid darkgrey">
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid darkgrey">
+                    <p class="p_color">TOTAL&nbsp;TYPE</p>
+                </td>
+                <td style="border-left: 1px solid darkgrey;border-bottom: 1px solid darkgrey">
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 1px solid darkgrey">
+                    <p class="p_color">DEPOSIT HELD</p>
+                </td>
+                <td style="border-left: 1px solid darkgrey;border-bottom: 1px solid darkgrey">
+                    <p></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <footer style="text-align: center">
+        <h6>THANKS FOR TRAVELLING WITH AIRBNB</h6>
+        <p class="p_color">99 RHODE ISLAND. ST., SAN FRANCISCO, CA , 94103, UNITED STATES</p>
+    </footer>
+</div>

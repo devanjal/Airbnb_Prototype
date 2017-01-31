@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Nishank Singla">
+    <!--airbnb-favicon.ico-->
+    <!--favicon.ico-->
+    <base href="/">
+    <title>Vacation Rentals, Homes, Apartments & Rooms for Rent - Airbnb</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/angular-ui-notification.min.css">
+    <link rel="stylesheet" href="css/airbnb.css">
+    <link rel="stylesheet" href="css/airbnb2.css">
+     <link rel="stylesheet" href="css/airbnb3.css">
+    <link rel="stylesheet" href="css/airbnb4.css">
+    <link rel="stylesheet" href="css/host.css">
+    <link rel="stylesheet" href="css/hostAddress.css">
+    <link rel="stylesheet" href="css/hostPhotos.css">
+    <link rel="stylesheet" href="css/hostDescription.css">
+    <link rel="stylesheet" href="css/pricing.css">
+    <link rel="stylesheet" href="css/newHost.css">
+    <link rel="stylesheet" href="css/hostReadyToPublish.css">
+    <link rel="stylesheet" href="css/listing.css">
+
+    <link rel="stylesheet" href="css/ng-image-gallery.css">
+    <!--<link rel="stylesheet" href="css/map_search-4d61a7252e5810494d5afef7f7834607.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .modal-container,
+        .modal {
+            background-color: rgba(0, 0, 0, 0.45)
+        }
+        
+        .modal-content {
+            margin: 0px 75px;
+        }
+        
+        .signupmodal .modal-dialog {
+            padding-top: 65px;
+        }
+        
+        .loginmodal .modal-dialog {
+            padding-top: 25px;
+        }
+        
+        .navbar-default {
+            background-color: transparent;
+            border-color: transparent;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+        
+        .navbar-header .icon-airbnb-alt {
+            display: block;
+            margin-top: 12px;
+        }
+        
+        .backbuttonSignup:focus,
+        .backbuttonSignup:active,
+        .backbuttonSignup:active:focus {
+            background-color: transparent;
+            border-color: transparent;
+        }
+        
+        .backbuttonSignup span:focus,
+        .backbuttonSignup span:active,
+        .backbuttonSignup span:active:focus {
+            background-color: transparent;
+            border-color: transparent;
+        }
+        
+        .navbar-header .hdr-btn {
+            padding: 0px 19px;
+            display: block;
+        }
+        
+        .navbar .container-fluid {
+            padding: 0;
+            height: 61px;
+            line-height: 61px;
+        }
+        
+        .navbar-right li {
+            height: inherit;
+            margin: 0 15px;
+        }
+        
+        .navbar-right li a {
+            display: block;
+            color: black !important;
+            line-height: 61px;
+            padding: 0;
+        }
+        
+        .livethere {
+            font-weight: 700 !important;
+            color: #FF5A5F !important;
+            /*margin-right: 8px !important;*/
+            font-family: inherit !important;
+            font-size: 48px !important;
+            line-height: 56px !important;
+            letter-spacing: -0.8px !important;
+        }
+        
+        .default h1 {
+            color: #484848 !important;
+            font-weight: 200 !important;
+            font-family: inherit !important;
+            font-size: 48px !important;
+            line-height: 56px !important;
+            letter-spacing: -0.8px !important;
+        }
+        
+        .default label {
+            padding-left: 10px;
+            font-weight: normal;
+            font-size: 15px;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+            line-height: normal;
+            margin-bottom: 0;
+        }
+        
+        .default input[type="text"],
+        .default select {
+            border: none;
+            box-shadow: none;
+            margin-bottom: 5px;
+            font-size: 19px !important;
+            letter-spacing: -0.5px;
+            line-height: 22px !important;
+            color: #484848;
+        }
+        
+        .default select {
+            width: 90%;
+            margin-bottom: 0;
+        }
+        
+        .default input[type="text"]:focus {
+            border-bottom: 1px solid #008489;
+        }
+        
+        .default select:focus {
+            border: none !important;
+            box-shadow: none !important;
+            border-bottom: 1px solid #008489;
+        }
+        
+        .default .rightarrow {
+            vertical-align: middle;
+            fill: #484848;
+            height: 24px;
+            width: 24px;
+            margin-top: 5px;
+        }
+        
+        .default .downarrow {
+            fill: currentColor;
+            height: 12px;
+            width: 12px;
+            position: absolute;
+            top: 35px;
+            bottom: 0;
+            margin: auto;
+            overflow: hidden;
+            right: 40px;
+            cursor: pointer;
+        }
+        
+        .default .searchbtn {
+            font-size: 18px !important;
+            line-height: 24px !important;
+            padding-top: 11px !important;
+            padding-bottom: 11px !important;
+            font-weight: normal;
+            padding-left: 16px;
+            padding-right: 16px;
+            width: auto;
+            min-width: 106px;
+            float: right !important;
+        }
+        
+        .user-icon {
+            height: 30px;
+            width: 30px;
+            top: 10px;
+            border-color: #c4c4c4;
+            background-position: 50% 7px;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAoCAMAAAChHKjRAAAAQlBMV…%2FwXYH2LBOd725swpBUkYY9CS0bbdhHmRj8olmS0b%2BAPxxJJ70mSPrkAAAAAElFTkSuQmCC);
+            -webkit-background-size: 18px 20px;
+            -moz-background-size: 18px 20px;
+            -o-background-size: 18px 20px;
+            background-size: 18px 20px;
+            background-repeat: no-repeat;
+            position: relative;
+            vertical-align: baseline;
+            background-color: transparent;
+        }
+        
+        .user-icon img {
+            height: 26px;
+            width: 26px;
+            vertical-align: top;
+        }
+        
+        .usericon:hover>.dropdown-menu {
+            display: block !important;
+        }
+        .dropdown-menu a{
+            border-bottom: 1px solid lightgray;
+            line-height: normal !important;
+            padding: 19px !important;
+        }
+    </style>
+</head>
+ <!---->
+<body ng-app="airbnb" ng-controller="indexController" ng-init="checkStatus()">
+    <nav class="navbar navbar-default" ng-hide="hideHeader">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="hdr-btn link-reset belo-container" aria-label="Airbnb">
+                    <i class="icon icon-pos--lower icon-airbnb-alt h2 show-login"></i>
+                    <!--<i class="icon icon-pos--lower  icon-airbnb show-logout"></i>-->
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" style="padding: 0;">
+                <ul class="nav navbar-nav navbar-right" style="height: 61px;line-height: 61px;">
+                    <li>
+                        <a href="#" ui-sref="host" style="padding-right: 10px;">Become a Host</a>
+                    </li>
+                    <li ng-show="loginStatus">
+                        <a href="#" style="padding-right: 4px;">Trips</a>
+                    </li>
+                    <li ng-show="loginStatus">
+                        <a href="#" style="padding-right: 4px;">Messages</a>
+                    </li>
+                    <li>
+                        <a href="#" style="padding-right: 4px;">Help</a>
+                    </li>
+                    <li ng-hide="loginStatus">
+                        <a href="#" style="cursor:pointer" ng-click="openSignup()">Sign Up</a>
+                    </li>
+                    <li ng-hide="loginStatus">
+                        <a href="#" ng-click="openLogin()" style="padding-right: 15px; cursor:pointer">Log In </a>
+                    </li>
+                    <li ng-show="loginStatus" uib-dropdown class="usericon" style="margin-right: 30px;">
+                        <a ui-sref="users" uib-dropdown-toggle class="no-crawl hdr-btn link-reset header-avatar-trigger needsclick" rel="nofollow" href="#">
+                            <span class="value_name margin-right--tiny hide-md">{{user.firstname}}</span>
+                            <div class="user-icon media-photo media-round user-profile-image header-icon icon-profile-alt-gray">
+                                <img width="28" height="28" ng-src="{{profileImage_icon}}" alt="">
+                            </div>
+                        </a>
+                        <div style="padding: 0px 20px;right: -10px;" uib-dropdown-menu class="panel tooltip-top-right drop-down-menu avatar-tooltip--new">
+                            <a href="/trips" class="js-your-trips-item panel-body link-reset hover-item no-crawl hide">
+                                <div class="hover-item__content">
+                                    Your Trips
+                                </div>
+                            </a>
+                            <a href="/city-hosts?source=hdr" class="hide city-host-button-md panel-body link-reset hover-item">
+                                <div class="hover-item__content">
+                                    City Hosts
+                                    <img class="beta-badge" src="https://a0.muscache.com/airbnb/static/magical_trips/guest/beta-badge-56a0d5bc185adfe79992a46991964070.png"
+                                        alt="Beta" height="18">
+                                </div>
+                            </a>
+                            <a href="/wishlists/my" class="js-wishlists-item panel-body link-reset hover-item no-crawl hide">
+                                <div class="hover-item__content">
+                                    Wish Lists
+                                </div>
+                            </a>
+                            <a href="#" ui-sref="users.edit" class=" panel-body link-reset hover-item no-crawl">
+                                <div class="hover-item__content">
+                                    Edit Profile
+                                </div>
+                            </a>
+                            <a href="/invite?r=3" class="travel-credit-item panel-body link-reset hover-item">
+                                <div class="hover-item__content">Travel Credit</div>
+                            </a>
+                            <a href="/gift?s=nav" class="gift-card-item panel-body link-reset hover-item">
+                                <div class="hover-item__content">
+                                    Gift Cards
+                                </div>
+                            </a>
+                            <a href="/users/notifications" class=" panel-body link-reset hover-item no-crawl">
+                                <div class="hover-item__content">
+                                    Account Settings
+                                </div>
+                            </a>
+                            <a href="/business-travel?s=nav" class="business-travel  panel-body link-reset hover-item">
+                                <div class="hover-item__content">
+                                    Business Travel
+                                </div>
+                            </a>
+                            <a href="#" ng-click="logout()" class=" panel-body link-reset hover-item no-crawl">
+                                <div class="hover-item__content">
+                                    Log Out
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+    <div ui-view style="max-width: 1080px !important;margin: 0 auto !important;position: relative !important;"></div>
+
+    <!--<div  id="footer" class="container-brand-light footer-surround footer-container">-->
+        <footer ng-hide="hideFooter" class="page-container-responsive footer-container" role="contentinfo">
+            <div class="row row-condensed">
+                <div class="language-curr-picker col-md-2">
+                    <div class="clearfix">
+                        <div class="language-picker col-sm-6 col-md-12">
+                            <div class="select select-large select-block space-2" data-reactid=".1"><label for="language-selector" class="screen-reader-only" data-reactid=".1.0"><span data-reactid=".1.0.0">Choose language</span></label>
+                                <select class="language-selector" id="language-selector" data-reactid=".1.1">
+                                    <option value="id" data-reactid=".1.1.$id">Bahasa Indonesia</option>
+                                    <option value="ms" data-reactid=".1.1.$ms">Bahasa Melayu</option>
+                                    <option value="ca" data-reactid=".1.1.$ca">Català</option>
+                                    <option value="da" data-reactid=".1.1.$da">Dansk</option>
+                                    <option value="de" data-reactid=".1.1.$de">Deutsch</option>
+                                    <option selected="" value="en" data-reactid=".1.1.$en">English</option>
+                                    <option value="es" data-reactid=".1.1.$es">Español</option>
+                                    <option value="el" data-reactid=".1.1.$el">Eλληνικά</option>
+                                    <option value="fr" data-reactid=".1.1.$fr">Français</option>
+                                    <option value="it" data-reactid=".1.1.$it">Italiano</option>
+                                    <option value="hu" data-reactid=".1.1.$hu">Magyar</option>
+                                    <option value="nl" data-reactid=".1.1.$nl">Nederlands</option>
+                                    <option value="no" data-reactid=".1.1.$no">Norsk</option>
+                                    <option value="pl" data-reactid=".1.1.$pl">Polski</option>
+                                    <option value="pt" data-reactid=".1.1.$pt">Português</option>
+                                    <option value="fi" data-reactid=".1.1.$fi">Suomi</option>
+                                    <option value="sv" data-reactid=".1.1.$sv">Svenska</option>
+                                    <option value="tr" data-reactid=".1.1.$tr">Türkçe</option>
+                                    <option value="is" data-reactid=".1.1.$is">Íslenska</option>
+                                    <option value="cs" data-reactid=".1.1.$cs">Čeština</option>
+                                    <option value="ru" data-reactid=".1.1.$ru">Русский</option>
+                                    <option value="th" data-reactid=".1.1.$th">ภาษาไทย</option>
+                                    <option value="zh" data-reactid=".1.1.$zh">中文 (简体)</option>
+                                    <option value="zh-TW" data-reactid=".1.1.$zh-TW">中文 (繁體)</option>
+                                    <option value="ja" data-reactid=".1.1.$ja">日本語</option>
+                                    <option value="ko" data-reactid=".1.1.$ko">한국어</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="currency-picker col-sm-6 col-md-12">
+                            <div class="space-2" data-reactid=".2"><label for="currency-selector" class="screen-reader-only" data-reactid=".2.0"><span data-reactid=".2.0.0">Choose currency</span></label>
+                                <div class="select select-block select-large" data-reactid=".2.1"><select id="currency-selector" data-reactid=".2.1.0"><option value="AED" data-reactid=".2.1.0.$AED">AED</option><option value="ARS" data-reactid=".2.1.0.$ARS">ARS</option><option value="AUD" data-reactid=".2.1.0.$AUD">AUD</option><option value="BGN" data-reactid=".2.1.0.$BGN">BGN</option><option value="BRL" data-reactid=".2.1.0.$BRL">BRL</option><option value="CAD" data-reactid=".2.1.0.$CAD">CAD</option><option value="CHF" data-reactid=".2.1.0.$CHF">CHF</option><option value="CLP" data-reactid=".2.1.0.$CLP">CLP</option><option value="CNY" data-reactid=".2.1.0.$CNY">CNY</option><option value="COP" data-reactid=".2.1.0.$COP">COP</option><option value="CRC" data-reactid=".2.1.0.$CRC">CRC</option><option value="CZK" data-reactid=".2.1.0.$CZK">CZK</option><option value="DKK" data-reactid=".2.1.0.$DKK">DKK</option><option value="EUR" data-reactid=".2.1.0.$EUR">EUR</option><option value="GBP" data-reactid=".2.1.0.$GBP">GBP</option><option value="HKD" data-reactid=".2.1.0.$HKD">HKD</option><option value="HRK" data-reactid=".2.1.0.$HRK">HRK</option><option value="HUF" data-reactid=".2.1.0.$HUF">HUF</option><option value="IDR" data-reactid=".2.1.0.$IDR">IDR</option><option value="ILS" data-reactid=".2.1.0.$ILS">ILS</option><option value="INR" data-reactid=".2.1.0.$INR">INR</option><option value="JPY" data-reactid=".2.1.0.$JPY">JPY</option><option value="KRW" data-reactid=".2.1.0.$KRW">KRW</option><option value="MAD" data-reactid=".2.1.0.$MAD">MAD</option><option value="MXN" data-reactid=".2.1.0.$MXN">MXN</option><option value="MYR" data-reactid=".2.1.0.$MYR">MYR</option><option value="NOK" data-reactid=".2.1.0.$NOK">NOK</option><option value="NZD" data-reactid=".2.1.0.$NZD">NZD</option><option value="PEN" data-reactid=".2.1.0.$PEN">PEN</option><option value="PHP" data-reactid=".2.1.0.$PHP">PHP</option><option value="PLN" data-reactid=".2.1.0.$PLN">PLN</option><option value="RON" data-reactid=".2.1.0.$RON">RON</option><option value="RUB" data-reactid=".2.1.0.$RUB">RUB</option><option value="SAR" data-reactid=".2.1.0.$SAR">SAR</option><option value="SEK" data-reactid=".2.1.0.$SEK">SEK</option><option value="SGD" data-reactid=".2.1.0.$SGD">SGD</option><option value="THB" data-reactid=".2.1.0.$THB">THB</option><option value="TRY" data-reactid=".2.1.0.$TRY">TRY</option><option value="TWD" data-reactid=".2.1.0.$TWD">TWD</option><option value="UAH" data-reactid=".2.1.0.$UAH">UAH</option><option selected="" value="USD" data-reactid=".2.1.0.$USD">USD</option><option value="UYU" data-reactid=".2.1.0.$UYU">UYU</option><option value="VND" data-reactid=".2.1.0.$VND">VND</option><option value="ZAR" data-reactid=".2.1.0.$ZAR">ZAR</option></select></div>
+                            </div>
+                        </div>
+                        <div class="cx-number"></div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-2 col-md-offset-1 hide-sm">
+                    <h2 class="h5">Airbnb</h2>
+                    <ul class="list-layout">
+                        <li><a href="/about/about-us" class="link-contrast">About</a></li>
+                        <li><a href="/careers" class="link-contrast">Careers</a></li>
+                        <li><a href="/press/news" class="link-contrast">Press</a></li>
+                        <li><a href="/policies" class="link-contrast">Policies</a></li>
+                        <li><a href="/help?from=footer" class="link-contrast">Help</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-md-offset-1 hide-sm">
+                    <h2 class="h5">Discover</h2>
+                    <ul class="list-layout">
+                        <li><a href="/trust" class="link-contrast">Trust &amp; Safety</a></li>
+                        <li><a href="/invite?r=6" class="link-contrast">Travel Credit</a></li>
+                        <li><a href="/gift?s=footer" class="link-contrast">Gift Cards</a></li>
+                        <li><a href="https://www.airbnbaction.com?utm_source=airbnb&amp;utm_medium=footer&amp;utm_campaign=product"
+                                class="link-contrast" target="_blank">Airbnb Action</a></li>
+                        <li><a href="/business-travel?s=footer" class="link-contrast">Business Travel</a></li>
+                        <li><a href="/things-to-do" class="link-contrast">Guidebooks</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-md-offset-1 hide-sm">
+                    <h2 class="h5">Hosting</h2>
+                    <ul class="list-layout">
+                        <li><a href="/host" class="link-contrast">Why Host</a></li>
+                        <li>
+                            <a href="/refer?r=6" class="link-contrast">
+                  Refer Hosts
+                  <span class="label label-new">New</span>
+                </a>
+                        </li>
+                        <li><a href="/hospitality" class="link-contrast">Hospitality</a></li>
+                        <li><a href="/help/responsible-hosting" class="link-contrast">Responsible Hosting</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider space-top-8 space-4 hide-sm">
+            <hr class="footer-divider show-sm">
+
+            <div class="footer-table">
+                <ul class="list-layout list-inline icon-list" itemscope="" itemtype="http://schema.org/Organization">
+                    <i class="icon icon-airbnb-alt icon-gray belo-icon icon-size-2"></i>
+                    <div class="text-muted">
+                        © Airbnb, Inc.
+                    </div>
+                </ul>
+                <ul class="list-layout list-inline icon-list right-list" itemscope="" itemtype="http://schema.org/Organization">
+
+                    <link itemprop="url" href="https://www.airbnb.com">
+                    <meta itemprop="logo" content="https://a2.muscache.com/airbnb/static/logos/belo-200x200-4d851c5b28f61931bf1df28dd15e60ef.png">
+
+                    <li><a href="/terms" class="link-contrast">Terms &amp; Privacy</a></li>
+                    <div class="hide-sm">
+                        <li><a href="/sitemaps" class="link-contrast">Site Map</a></li>
+                        <li>
+                            <a href="https://www.facebook.com/airbnb" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
+                                <span class="screen-reader-only">Facebook</span>
+                                <i class="icon footer-icon icon-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://twitter.com/airbnb" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
+                                <span class="screen-reader-only">Twitter</span>
+                                <i class="icon footer-icon icon-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/airbnb" class="link-contrast footer-icon-container" itemprop="sameAs" target="_blank">
+                                <span class="screen-reader-only">Instagram</span>
+                                <i class="icon footer-icon icon-instagram"></i>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+
+    <!--</div>-->
+
+
+    <script src="js/angular.js" type="text/javascript"></script>
+    <script src="js/angular-route.min.js" type="text/javascript"></script>
+    <script src="js/ngProgress.min.js" type="text/javascript"></script>
+    <script src="js/ui-bootstrap-tpls-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/angular-ui-router.min.js" type="text/javascript"></script>
+    <script src="js/angular-ui-notification.min.js"></script>
+    <script src="js/ng-file-upload-shim.min.js"></script>
+    <script src="js/ng-file-upload.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+    <script src="https://rawgit.com/hammerjs/hammer.js/v2.0.8/hammer.min.js"></script>
+    <!--<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>-->
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
+    <script src="js/ngAutocomplete.js"></script>
+
+
+    <script src="js/ng-image-gallery.js"></script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&key=AIzaSyBK3e0M46Nzcp8hOuvA7sOHSGc1tQsYrfU"></script>
+
+    <script src="app.js" type="text/javascript"></script>
+    <script src="hostPage/hostController.js" type="text/javascript"></script>
+    <script src="searchPage/searchController.js" type="text/javascript"></script>
+    <script src="default/defaultController.js" type="text/javascript"></script>
+    <script src="profile/profileController.js" type="text/javascript"></script>
+
+    <script src="propertyPage/propertyController.js" type="text/javascript"></script>
+
+    <script src="tripsPage/tripController.js" type="text/javascript"></script>
+    <script src="listingPages/listingController.js" type="text/javascript"></script>
+    <script src="bill/billController.js" type="text/javascript"></script>
+
+</body>
+</html>

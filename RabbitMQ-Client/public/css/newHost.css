@@ -1,0 +1,154 @@
+.header
+{
+    position: relative;
+}
+.header__photo
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(https://a1.muscache.com/airbnb/static/slash_host/never_a_stranger-65d344f0f8227f55135a0efd715e7fbe.jpg);
+}
+.space-md-8
+{
+    margin-bottom: 50px;
+}
+.space-md-top-8
+{
+    margin-top: 50px;
+}
+.header-card__body
+{
+    color: #fff;
+    font-size: 17px;
+}
+.earning-estimation-container
+{
+    background-color: #fff;
+}
+.earning-estimation
+{
+    padding: 50px;
+}
+.room-type-selections > :not(:last-child)
+{
+    margin-bottom: 15px;
+}
+.earning-estimation__room-type span
+{
+    cursor: pointer;
+}
+.room-type-selections > * span
+{
+    padding-left: 10px;
+}
+.earning-estimation__location-input
+{
+    width: 80%;
+}
+.earning-estimation__location-input input
+{
+    color: #767676;
+}
+.earning-estimation__accommodation
+{
+    width: 70%;
+}
+.earning-estimation__accommodation select
+{
+    color: #767676;
+}
+.earning-estimation__card
+{
+    height: 91px;
+    max-width: 250px;
+    background-color: #00a699;
+    color: #fff;
+    border-radius: 3px;
+}
+.earning-estimation__tooltip
+{
+    margin-left: 4px;
+}
+.how-hosting-works__title
+{
+    font-weight: 300;
+    letter-spacing: 0.2em;
+}
+.how-hosting-works__section
+{
+    background-color: #fff;
+    padding: 50px;
+}
+.how-hosting-works__section-label
+{
+    display: block;
+    height: 24px;
+    width: 24px;
+    line-height: 21px;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid #767676;
+    color: #767676;
+}
+.how-hosting-works__section-sub-title
+{
+    font-size: 16px;
+}
+.info-item__icon
+{
+    display: block;
+}
+.info-item__title
+{
+    font-size: 23px;
+}
+.info-item__body
+{
+    font-size: 14px;
+}
+.trust-and-guarantee__sub-title
+{
+    font-size: 16px;
+}
+.page-container-responsive.footer
+{
+    background-image: url(https://a0.muscache.com/airbnb/static/slash_host/footer_background-84a76b9c468aa70856a6caa9b5c6734d.png);
+    position: relative;
+}
+.hand-key-image
+{
+    right: 20%;
+    width: 240px;
+    height: 200px;
+    bottom: -20px;
+    background-image: url(https://a0.muscache.com/airbnb/static/slash_host/hand_key-601456c51410ba5705dfef7c047bfe4f.png);
+    background-size: cover;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

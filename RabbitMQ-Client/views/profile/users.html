@@ -1,0 +1,92 @@
+<div class="with-new-header has-epcot-header" ng-controller="profileController" ng-init="getUser()">
+    <div class="subnav hide-print" style="margin-top: -10px;margin-left: -100px;margin-right: -100px;">
+        <div class="page-container-responsive">
+            <ul class="subnav-list">
+                <li ng-repeat="menu in profile_menus">
+                    <a ng-click="selectMenu($index)" ui-sref="{{menu.link}}" aria-selected="{{$index == selected}}" ng-class="{'active': $index == selected}" id="{{menu.id}}" class="subnav-item" href="#" aria-selected="false">{{menu.name}}</a>
+                </li>
+                <!--<li>
+                    <a id="rooms-item" class="subnav-item cohosting-ml-tooltip-trigger" href="#" aria-selected="false">Your Listing</a>
+                </li>
+                <li>
+                    <a id="your-trips-item" class="subnav-item" href="#" aria-selected="false">Your Trips</a>
+                </li>
+                <li>
+                    <a id="user-profile-item" aria-selected="true" class="subnav-item" href="#" aria-selected="false">Profile</a>
+                </li>
+                <li>
+                    <a id="account-item" class="subnav-item" href="#" aria-selected="false">Account</a>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+    <div ui-view>
+        <div class="container" style="margin-top: 30px;min-height: 450px;">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 hide-sm">
+                    <div id="user" class="space-4 ">
+                        <div>
+                            <div class="space-2" id="user-media-container">
+                                <div id="slideshow" class="slideshow" style="height: 223px;position: relative;">
+                                    <div class="slideshow-preload"></div>
+                                    <ul class="slideshow-images">
+                                        <li class="active media-photo media-photo-block">
+                                            <img style="height: 100%;" class="img-responsive" height="225" ngf-src="profileImage" title="Nishank"
+                                                width="225">
+                                        </li>
+                                        <li class="media-photo media-photo-block"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel space-4">
+                        <div class="panel-header">
+                            Verified info
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-unstyled space-3">
+                                No verifications yet
+                            </ul>
+
+                            <a href="#">
+                                Add Verifications
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-9 col-md-8 hide-sm">
+                    <div class="col-sm-8 col-md-12 col-lg-12">
+                        <h1>
+                            Hey, I’m {{user_info.firstname}} !
+                        </h1>
+                        <div class="h5 space-top-2">
+                            <span class="text-normal">
+                                Member since {{month}} {{year}}
+                            </span>
+                        </div>
+                        <div class="text-muted space-top-2">
+                            <div data-hypernova-key="user_flag_controlbundlejs">
+                                <div data-reactid=".4i7xugmccg" data-react-checksum="-1748003887">
+                                    <div class="flag-widget" data-reactid=".4i7xugmccg.1">
+                                        <a href="#" class="link-reset" title="Report this user" data-prevent-default="true" data-reactid=".4i7xugmccg.1.0"><i class="icon icon-flag h4" data-reactid=".4i7xugmccg.1.0.0"></i><span data-reactid=".4i7xugmccg.1.0.1"> </span>
+                  <span
+                    data-reactid=".4i7xugmccg.1.0.2">Report this user</span>
+                </a>
+                                    </div>
+                                    <noscript data-reactid=".4i7xugmccg.2"></noscript>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit_profile_container space-3">
+                            <a href="#" ui-sref="users.edit">Edit Profile</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

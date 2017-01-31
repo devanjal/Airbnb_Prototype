@@ -1,0 +1,171 @@
+<div class="list-your-space__progress">
+
+    <div class="left-backdrop"></div>
+
+    <div class="right-backdrop hide-sm bg-white right-backdrop--with-bg"></div>
+
+    <div class="list-your-space__content">
+        <div class="centered-content clearfix">
+            <div class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix">
+
+                <div class="main-panel main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
+                    <div class="panel--no-border panel-title" style="padding-bottom: 0;">
+                        <h3 class="no-margin-padding" style="margin-bottom: 30px;">
+                            How many guests can your place accommodate?
+                        </h3>
+                        <div class="space-6" style="margin-bottom: 0;">
+                            <div>
+                                <div class="increment-btn no-padding">
+                                    <div class="increment-btn btn-group no-padding">
+                                        <div class="text-gray btn increment-btn__label increment-jumbo increment-btn__label--with-increment-btns" tabindex="0" role="textbox">
+                                            <div class="increment-btn__border-container-label text-truncated">
+                                                <span class="text-muted">
+                                                    <span>3 beds</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-jumbo increment-btn__decrementer" aria-label="minus 1">
+                                            <div class="increment-btn__border-container-decrementer">
+
+                                            </div>
+                                        </button>
+                                        <button type="button" class="btn btn-jumbo increment-btn__incrementer increment-btn__incrementer" aria-label="plus 1">
+
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <!--<div>-->
+                        <!--<div class="increment-btn no-padding">-->
+                        <!--<div class="increment-btn btn-group no-padding no-border-bottom-radius">-->
+
+                        <!--<div class="text-gray btn increment-btn__label increment-jumbo increment-btn__label&#45;&#45;with-increment-btns" tabindex="0" role="textbox">-->
+                        <!--<div class="increment-btn__border-container-label text-truncated">-->
+                        <!--<span class="text-muted">-->
+                        <!--<span>1 bed</span>-->
+                        <!--</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<button class="btn btn-jumbo increment-btn__decrementer" type="button" disabled="" aria-label="minus 1">-->
+                        <!--<div class="increment-btn__border-container-decrementer"></div>-->
+                        <!--</button>-->
+                        <!--<button class="btn btn-jumbo increment-btn__incrementer increment-btn__incrementer" type="button" aria-label="plus 1">-->
+
+                        <!--</button>-->
+
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <div>
+                            <div class="select select-block select-jumbo">
+                                <select name="bed_types" class="no-border-top">
+                                            <option value="real_bed">Real Bed</option>
+                                            <option value="pull_out_sofa">Pull-out Sofa</option>
+                                            <option value="airbed">Airbed</option>
+                                            <option value="futon">Futon</option>
+                                            <option value="couch">Couch</option>
+                                        </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row no-margin-h space-top-6">
+
+                        <label class="text-gray">
+                                    <span>How many guests can stay?</span>
+                                </label>
+
+                        <div>
+                            <div class="increment-btn no-padding">
+
+                                <div class="increment-btn btn-group no-padding">
+                                    <div class="text-gray btn increment-btn__label increment-jumbo increment-btn__label--with-increment-btns" tabindex="0" role="textbox">
+                                        <div class="increment-btn__border-container-label text-truncated">
+                                            <span class="text-muted">
+                                                <span>{{quantity + ' guest'}}</span>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="btn btn-jumbo increment-btn__decrementer" ng-click="decrementQuantity()" ng-disabled="!activeDecrement"
+                                        aria-label="minus 1">
+                                        <div class="increment-btn__border-container-decrementer">
+
+                                        </div>
+                                    </button>
+
+                                    <button type="button" ng-click="incrementQuantity()" class="btn btn-jumbo increment-btn__incrementer increment-btn__incrementer"
+                                        aria-label="plus 1">
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="main-panel__actions-wrapper">
+                    <div class="centered-content clearfix" data-reactid=".k4dqbfueio.1.4.0.0.2.0">
+                        <div class="bg-white main-panel-outer-half clearfix" data-reactid=".k4dqbfueio.1.4.0.0.2.0.0">
+                            <div class="no-margin-padding__sm main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8" data-reactid=".k4dqbfueio.1.4.0.0.2.0.0.0">
+                                <div class="divider hide-sm" data-reactid=".k4dqbfueio.1.4.0.0.2.0.0.0.0"></div>
+                                <div class="row no-margin-padding__sm" data-reactid=".k4dqbfueio.1.4.0.0.2.0.0.0.1">
+                                    <div class="main-panel__actions col-sm-12 no-margin-padding__sm" data-reactid=".k4dqbfueio.1.4.0.0.2.0.0.0.1.0">
+                                        <div data-reactid=".k4dqbfueio.1.4.0.0.2.0.0.0.1.0.0">
+                                            <a ui-sref="become-a-host.location" class="btn-progress-back link-icon va-container va-container-v pull-left text-gray link--accessibility-outline"
+                                                href="#" data-reactid=".k4dqbfueio.1.4.0.0.2.0.0.0.1.0.0.0"><span class="icon hide-sm" data-reactid=".k4dqbfueio.1.4.0.0.2.0.0.0.1.0.0.0.0"></span>
+                                                <span
+                                                    class="va-middle" data-reactid=".k4dqbfueio.1.4.0.0.2.0.0.0.1.0.0.0.1">
+                                                    <h5 class="text-normal" data-reactid=".k4dqbfueio.1.4.0.0.2.0.0.0.1.0.0.0.1.0"><span data-reactid=".k4dqbfueio.1.4.0.0.2.0.0.0.1.0.0.0.1.0.0">Back</span></h5>
+                                                    </span>
+                                            </a>
+                                            <a ng-click="firststepFinish()" class="btn btn-large btn-progress-next btn-large__next-btn pull-right-md btn-primary" href="#">
+                                                <div class="btn-progress-next__text">
+                                                    <span>
+                                                        Finish
+                                                    </span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="waypoint-container">
+                    <span style="font-size:0;">
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="help-panel-container">
+                <div class="hide-sm help-panel panel">
+                    <div class="panel-body">
+                        <div class="help-panel__bulb-img space-2"></div>
+                        <div class="help-panel__text">
+                            <p>
+                                <span>
+                                    The number and type of beds you have determines how many guests can stay comfortably.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-sm help-panel__floating-container">
+                    <noscript></noscript><span class="tooltip-popup__transition-container"><div class="help-panel--collapsed help-panel__bulb-img-bubble"><div class="help-panel__bulb-img img-center" data-reactid=".k4dqbfueio.1.4.0.1.1.1.$=1$collapsed.0"></div></div></span></div>
+            </div>
+        </div>
+    </div>
+</div>

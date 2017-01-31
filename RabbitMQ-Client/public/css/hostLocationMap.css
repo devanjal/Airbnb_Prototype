@@ -1,0 +1,179 @@
+/*Top Css*/
+div#lys-redesign-div
+{
+    min-height: calc(100vh - 62px);
+    position: relative;
+    box-sizing: border-box;
+}
+div.left-backdrop
+{
+    width: 50%;
+    padding-left: 91.2px;
+    box-sizing: content-box;
+    background-color:#fff;
+    left:0;
+    z-index: -1;
+    position: fixed;
+    top:0;
+    bottom:0;
+}
+div.right-backdrop.hide-sm.bg-white.right-backdrop--with-bg
+{
+    background-color: #fafafa;
+    left: 50%;
+    margin-left: 91.2px;
+    right: 0;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+.list-your-space__progress .list-your-space__content
+{
+    padding-top: 71px;
+}
+
+/*Middle Css*/
+.lys-location__map-pane
+{
+    position: relative;
+    width: 100%;
+    height: 340px;
+}
+
+
+/*Bottom Css*/
+div.main-panel__actions-wrapper
+{
+    position: fixed;
+    z-index: 111;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+div.centered-content
+{
+    max-width: 912px;
+    margin: 0 auto;
+}
+
+div.main-panel-outer-half
+{
+    width: 60%;
+    float: left;
+}
+div.main-panel-inner-half
+{
+    max-width: 544px;
+    width: 100%;
+}
+div.pull-right
+{
+    float: right;
+}
+
+div.divider
+{
+    padding-bottom: 30px;
+    height: 1px;
+    box-shadow: 0 -1px 0 rgba(0,0,0,0.08);
+    position: relative;
+}
+a
+{
+    text-decoration: none;
+    background: transparent;
+}
+
+a.btn-progress-back
+{
+    padding-right: 20px;
+    line-height: 42px;
+    white-space: nowrap;
+    max-width: 50%;
+    cursor: pointer;
+}
+a.va-container-v.va-container
+{
+    height: 100%;
+    display: table;
+    position: relative;
+}
+
+span.icon.hide-sm
+{
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+    background-image: url(https://a1.muscache.com/airbnb/static/list_your_space/nav-back-00912cb5b256d07b247803641c357000.png);
+    width: 10px;
+    height: 9px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+}
+
+h5.text-normal
+{
+    font-weight: normal;
+    margin: 0;
+    color: inherit;
+    font-size: 16px;
+}
+
+a.btn-progress-next.pull-right-md.btn-large__next-btn
+{
+    max-width: 50%;
+    float: right;
+    min-width: 185px;
+}
+
+div.btn-progress-next__text
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+div.help-panel-container
+{
+    top: 71px;
+    left: 50%;
+    margin-left: 91.2px;
+    position: fixed;
+    z-index: 112;
+    right: 0;
+    max-width: 368px;
+    box-sizing: border-box;
+}
+div.hide-sm.help-panel
+{
+    margin: 60px 30px 0;
+    border: 1px solid #dce0e0;
+    border-radius: 4px;
+}
+div.help-panel__bulb-img.space-2
+{
+    margin-bottom: 14px;
+    background-repeat: no-repeat;
+    background-image: url(https://a0.muscache.com/airbnb/static/list_your_space/tip-icon-73f3ef1d10a9545bfd15fd266803da48.png);
+    width: 22px;
+    height: 31px;
+    box-sizing: border-box;
+}
+div.help-panel__text
+{
+    font-size: 16px;
+    line-height: 150%;
+    color: #767676;
+}
+
+div.tip-address-img
+{
+    background-repeat: no-repeat;
+    background-image: url(https://a2.muscache.com/airbnb/static/list_your_space/tip-address-3a85eca55833a5cee81d0c8df157d89d.png);
+    width: 93px;
+    height: 93px;
+}

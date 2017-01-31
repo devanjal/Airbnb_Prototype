@@ -1,0 +1,39 @@
+{
+  "name": "airbnb",
+  "version": "1.0.0",
+  "description": "Vacation Rentals, Homes, Apartments & Rooms for Rent - Airbnb",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devanjal/Airbnb-prototype.git#Nishank"
+  },
+  "author": "Nishank Singla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devanjal/Airbnb-prototype/issues"
+  },
+  "homepage": "https://github.com/devanjal/Airbnb-prototype/tree/Nishank#readme",
+  "dependencies": {
+    "amqp": "^0.2.6",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "mongodb": "^2.2.11",
+    "morgan": "^1.7.0",
+    "mysql": "^2.12.0",
+    "nodemon": "^1.11.0",
+    "serve-favicon": "^2.3.0",
+    "serve-static": "^1.11.1",
+    "simple-node-logger": "^0.93.12"
+  }
+}

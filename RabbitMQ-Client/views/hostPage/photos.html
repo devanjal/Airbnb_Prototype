@@ -1,0 +1,128 @@
+<div class="list-your-space__progress">
+
+    <div class="full-backdrop"></div>
+    <div class="list-your-space__content">
+        <div class="centered-content clearfix">
+            <div class="main-panel-container no-padding-h bg-white col-sm-12 no-padding-h">
+
+                <div class="main-panel main-panel-padding main-panel-progress col-sm-12 main-panel-inner-full space-sm-8">
+                    <div class="panel--no-border panel-title">
+                        <h3 class="no-margin-padding">Photos</h3>
+                    </div>
+                    <div class="row extend-margin-h photo-card__content space-4">
+                        <div class="help-panel__floating-container">
+                            <span class="tooltip-popup__transition-container">
+                                <div class="help-panel--collapsed help-panel__bulb-img-bubble">
+                                    <div class="help-panel__bulb-img img-center"></div>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="row no-margin-h">
+                            <div class="col-sm-12 no-padding-h">
+                                <div class="drag-and-drop__container list-unstyled photo-list__container">
+                                    <div class="col-sm-12 space-4" ng-show="photos.length!=0" ng-mouseenter="options=true" ng-mouseleave="options=false">
+                                        <div style="padding-left: 12px;" ng-show="options" class="photo-preview__btns">
+                                            <div class="btn photo-preview__btn photo-preview__delete-btn" ng-click="deletePhoto(0)">
+                                                <div class="img__icon-trash-large img__icon-large pull-left">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img ngf-src="photos[0]" style="width:inherit" />
+                                    </div>
+                                    <!--|| photos.length!==0-->
+                                    <div class="col-sm-12 space-4" ng-hide="photos.length!=0">
+                                        <input class="input-file" id="photo-image" name="image" type="file" ngf-select="uploadFiles($files)" ngf-multiple="true" ngf-max-size="1MB"
+                                                    ngf-pattern="'image/*" accept="image/*" />
+                                        <label class="col label--no-margin-padding" for="photo-image">
+                                            <div  class="panel-body photos__empty-frame photos__empty-drag-highlight va-container va-container-h va-container-v" style="border: 2px dashed #bbb;">
+                                                <div  class="va-middle text-center text-gray img__upload-photos-ghosts">
+                                                    <div class="col col-center">
+                                                        <div class="btn btn-primary btn-jumbo">
+                                                            <i class="icon icon-upload"></i>
+                                                            <span>Upload Photos</span>
+                                                        </div>
+                                                        <div class="row space-top-2">
+                                                            <div class="h4 text-normal">
+                                                                <span>or drag them in</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        
+                                    </div>
+                                    <div ng-mouseenter="showphotos2=true" ng-mouseleave="showphotos2=false" ng-hide="$index===0" class="col-lg-4 col-md-6 col-sm-12 space-top-5" ng-repeat="photo in photos" ng-if="$index > 0">
+                                        <div style="padding-left: 12px;" ng-show="showphotos2" class="photo-preview__btns">
+                                            <div ng-click="deletePhoto($index)" class="btn photo-preview__btn photo-preview__delete-btn">
+                                                <div class="img__icon-trash-large img__icon-large pull-left">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img ngf-src="photo" style="width: 100%;height: 93%;"/>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-12 space-top-5">
+                                        <input class="input-file" id="photo-image" name="image" type="file" ngf-select="uploadFiles($files)" ngf-multiple="true" ngf-max-size="1MB"
+                                        ngf-pattern="'image/*" accept="image/*" />
+                                        <label class="col label--no-margin-padding" for="photo-image">
+                                            <div class="panel photos-list__add-photo photos__empty-drag-highlight" style="height: 252.333px; border: 2px dashed #bbb;">
+                                                <div class="va-container va-container-v va-container-h">
+                                                    <div class="va-middle text-center">
+                                                        <div class="img__icon-plus-grey img-center">
+                                                        </div>
+                                                        <div class="text-gray space-top-2">
+                                                            <span>Add more</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-panel__actions-wrapper">
+                    <div class="centered-content clearfix">
+                        <div class="bg-white col-sm-12 no-padding-h shadowed">
+                            <div class="no-margin-padding__sm main-panel-padding main-panel-progress col-sm-12 main-panel-inner-full space-sm-8" data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0">
+                                <div class="divider hide-sm" data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0.0"></div>
+                                <div class="row no-margin-padding__sm" data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0.1">
+                                    <div class="main-panel__actions col-sm-12 no-margin-padding__sm" data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0.1.0">
+                                        <div data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0.1.0.0">
+                                            <a class="btn-progress-back link-icon va-container va-container-v pull-left text-gray link--accessibility-outline" href="#"
+                                                ui-sref="become-a-host" data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0.1.0.0.0"><span class="icon hide-sm" data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0.1.0.0.0.0"></span>
+                                                <span class="va-middle" data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0.1.0.0.0.1">
+                                                    <h5 class="text-normal" data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0.1.0.0.0.1.0"><span data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0.1.0.0.0.1.0.0">Back</span></h5>
+                                                </span>
+                                            </a>
+                                            <a ng-hide="photos.length>0" class="btn btn-large btn-progress-next btn-large__next-btn pull-right-md" href="#" ui-sref="become-a-host.description">
+                                                <div class="btn-progress-next__text" data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0.1.0.0.1.0">
+                                                    <span data-reactid=".szw7ejlz40.1.4.0.0.2.0.0.0.1.0.0.1.0.0">
+                                                        Skip for now
+                                                    </span>
+                                                </div>
+                                            </a>
+                                            <a ng-show="photos.length>0" ui-sref="become-a-host.description" class="btn btn-large btn-progress-next btn-large__next-btn pull-right-md btn-primary"href="#">
+                                                <div class="btn-progress-next__text">
+                                                    <span>Next</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="waypoint-container"><span style="font-size:0;"></span></div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

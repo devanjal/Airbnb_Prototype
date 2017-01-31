@@ -1,0 +1,190 @@
+<div class="list-your-space__progress">
+    <div class="left-backdrop"></div>
+    <div class="right-backdrop hide-sm bg-white right-backdrop--with-bg"></div>
+</div>
+
+<div class="list-your-space__content">
+    <div class="centered-content clearfix">
+        <div class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix">
+            <div class="main-panel main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
+                <div class="panel--no-border panel-title">
+                    <h3 class="no-margin-padding">
+                        What kind of place are you listing?
+                    </h3>
+                </div>
+                <div class="">
+                    <div>
+                        <div class="block-radio-button">
+                            <label class="btn btn-block block-radio-button__panel" for="room-type-entire_home">
+                                <div class="row no-margin-h">
+                                    <i class="pull-left icon icon-with-label icon-gray icon-font-size-20 icon-entire-place"></i>
+                                    <div class="pull-left text-lead block-radio-button__label">
+                                        <span>Entire place</span>
+                                    </div>
+                                    <div class="pull-right">
+                                        <input ng-model="property.category" id="room-type-entire_home" class="pointer-input" name="roomType" value="Entire Home" type="radio"/>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="block-radio-button">
+                            <label class="btn btn-block block-radio-button__panel" for="room-type-private_room">
+                                <div class="row no-margin-h">
+                                    <i class="pull-left icon icon-with-label icon-gray icon-font-size-20 icon-private-room"></i>
+                                    <div class="pull-left text-lead block-radio-button__label">
+                                        <span>Private room</span>
+                                    </div>
+                                    <div class="pull-right">
+                                        <input ng-model="property.category" id="room-type-private_room" class="pointer-input" name="roomType" value="Private Room" type="radio"/>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="block-radio-button">
+                            <label class="btn btn-block block-radio-button__panel" for="room-type-shared_room">
+                                <div class="row no-margin-h">
+                                    <i class="pull-left icon icon-with-label icon-gray icon-font-size-20 icon-shared-room"></i>
+                                    <div class="pull-left text-lead block-radio-button__label">
+                                        <span>Shared room</span>
+                                    </div>
+                                    <div class="pull-right">
+                                        <input ng-model="property.category" id="room-type-shared_room" class="pointer-input" name="roomType" value="Shared Room" type="radio"/>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="space-top-4 space-4">
+                        <div>
+                            <label class="h4 text-gray text-normal" for="house-type">
+                                <span>What type of property is this?</span>
+                            </label>
+                            <div class="select select-block select-jumbo">
+                                <select id="house-type" name="house_type" class="" ng-model="property.type" required>
+                                    <option selected="" value="" disabled="">Select one</option>
+                                    <option value="2">House</option>
+                                    <option value="1">Apartment</option>
+                                    <option value="-1" disabled="">──────────────</option>
+                                    <option value="3">Bed &amp; Breakfast</option>
+                                    <option value="43">Boutique hotel</option>
+                                    <option value="44">Nature lodge</option>
+                                    <option value="45">Hostel</option>
+                                    <option value="46">Timeshare</option>
+                                    <option value="47">Serviced apartment</option>
+                                    <option value="48">Minsu (Taiwan)</option>
+                                    <option value="49">Ryokan (Japan)</option>
+                                    <option value="50">Pension (Korea)</option>
+                                    <option value="51">Heritage hotel (India)</option>
+                                    <option value="-2" disabled="">──────────────</option>
+                                    <option value="8">Boat</option>
+                                    <option value="38">Bungalow</option>
+                                    <option value="4">Cabin</option>
+                                    <option value="5">Castle</option>
+                                    <option value="18">Cave</option>
+                                    <option value="22">Chalet</option>
+                                    <option value="37">Condominium</option>
+                                    <option value="9">Dorm</option>
+                                    <option value="23">Earth House</option>
+                                    <option value="40">Guesthouse</option>
+                                    <option value="24">Hut</option>
+                                    <option value="12">Igloo</option>
+                                    <option value="19">Island</option>
+                                    <option value="10">Lighthouse</option>
+                                    <option value="35">Loft</option>
+                                    <option value="28">Plane</option>
+                                    <option value="32">Camper/RV</option>
+                                    <option value="34">Tent</option>
+                                    <option value="16">Tipi</option>
+                                    <option value="36">Townhouse</option>
+                                    <option value="25">Train</option>
+                                    <option value="6">Treehouse</option>
+                                    <option value="11">Villa</option>
+                                    <option value="15">Yurt</option>
+                                    <option value="33">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-panel__actions-wrapper">
+                <div class="centered-content clearfix">
+                    <div class="bg-white main-panel-outer-half clearfix shadowed">
+                        <div class="no-margin-padding__sm main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
+                            <div class="divider hide-sm">
+
+                            </div>
+                            <div class="row no-margin-padding__sm">
+                                <div class="main-panel__actions col-sm-12 no-margin-padding__sm">
+                                    <div>
+                                        <a ui-sref="become-a-host" class="btn-progress-back link-icon va-container va-container-v pull-left text-gray link--accessibility-outline"
+                                            href="#">
+                                            <span class="icon hide-sm">
+
+                                            </span>
+                                            <span class="va-middle">
+                                                <h5 class="text-normal">
+                                                    <span>Back</span>
+                                                </h5>
+                                            </span>
+                                        </a>
+                                        <a style="border-color: #ff5a5f;background-color: #ff5a5f;" ng-class="{'disabled' : !property.category}" ng-disabled="!property.category" ui-sref="become-a-host.location" class="btn btn-large btn-progress-next btn-large__next-btn pull-right-md btn-primary"
+                                            href="#">
+                                            <div class="btn-progress-next__text">
+                                                <span>Next</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="help-panel-container">
+            <div class="hide-sm help-panel panel">
+                <div class="panel-body">
+                    <div class="help-panel__bulb-img space-2">
+
+                    </div>
+                    <div class="help-panel__text">
+                        <div>
+                            <p>
+                                <span class="help-panel__title">
+                                    <span>Entire place</span>
+                                    <br>
+                                </span>
+                                <span>Guests will rent the entire place. Includes in-law units.</span>
+                            </p>
+                            <p>
+                                <span class="help-panel__title">
+                                    <span>Private room</span>
+                                    <br>
+                                </span>
+                                <span>Guests share some spaces but they’ll have their own private room for sleeping.</span>
+                            </p>
+                            <p>
+                                <span class="help-panel__title">
+                                    <span>Shared room</span>
+                                    <br>
+                                </span>
+                                <span>Guests don’t have a room to themselves.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="show-sm help-panel__floating-container">
+                <span class="tooltip-popup__transition-container">
+                    <div class="help-panel--collapsed help-panel__bulb-img-bubble">
+                        <div class="help-panel__bulb-img img-center">
+
+                        </div>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

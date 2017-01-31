@@ -1,0 +1,170 @@
+<div class="list-your-space__progress">
+    <div class="left-backdrop"></div>
+    <div class="right-backdrop hide-sm bg-white right-backdrop--with-bg"></div>
+
+    <div class="list-your-space__content">
+
+        <div class="centered-content clearfix">
+
+            <div>
+
+                <div class="main-panel-container no-padding-h bg-white main-panel-outer-half clearfix">
+
+                    <div class="main-panel main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
+                        <div class="panel--no-border panel-title">
+                            <h3 class="no-margin-padding">Where’s your place located?</h3>
+                        </div>
+                        <div>
+                            <form>
+                                <div>
+                                    <label for="address-form-field-country_code">
+                                                <span>Country</span>
+                                            </label>
+                                    <div class="select select-block select-jumbo whole-width">
+                                        <select ng-model="property.country" class="" name="country_code" id="address-form-field-country_code">
+                                                    <option value="">Select country</option>
+                                                    <option value="AF" data-prefix="93">Afghanistan</option>
+                                                    <option value="AX" data-prefix="358">Åland Islands</option>
+                                                    <option value="AL" data-prefix="355">Albania</option>
+                                                    <option value="DZ" data-prefix="213">Algeria</option>
+                                                    <option value="AS" data-prefix="1">American Samoa</option>
+                                                    <option value="AD" data-prefix="376">Andorra</option>
+                                                    <option value="AO" data-prefix="244">Angola</option>
+                                                    <option value="AI" data-prefix="1">Anguilla</option>
+                                                    <option value="AG" data-prefix="1">Antigua and Barbuda</option>
+                                                    <option value="AR" data-prefix="54">Argentina</option>
+                                                    <option value="AM" data-prefix="374">Armenia</option>
+                                                    <option value="AW" data-prefix="297">Aruba</option>
+                                                    <option value="AU" data-prefix="61">Australia</option>
+                                                    <option value="AT" data-prefix="43">Austria</option>
+                                                    <option value="AZ" data-prefix="994">Azerbaijan</option>
+                                                    <option value="BS" data-prefix="1">Bahamas</option>
+                                                    <option value="BH" data-prefix="973">Bahrain</option>
+                                                    <option value="BD" data-prefix="880">Bangladesh</option>
+                                                    <option value="BB" data-prefix="1">Barbados</option>
+                                                    <option value="BY" data-prefix="375">Belarus</option>
+                                                    <option value="BE" data-prefix="32">Belgium</option>
+                                                    <option value="BZ" data-prefix="501">Belize</option>
+                                                    <option value="BJ" data-prefix="229">Benin</option>
+                                                    <option value="BM" data-prefix="1">Bermuda</option>
+                                                    <option value="BT" data-prefix="975">Bhutan</option>
+                                                    <option value="BO" data-prefix="591">Bolivia</option>
+                                                    <option value="BA" data-prefix="387">Bosnia and Herzegovina</option>
+                                                    <option value="BW" data-prefix="267">Botswana</option>
+                                                    <option value="GB" data-prefix="44">United Kingdom</option>
+                                                    <option value="US" data-prefix="1" selected>United States</option>
+                                                    <option value="IN" data-prefix="91">India</option>
+                                                </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="space-top-2 col-sm-12">
+                                        <label for="address-form-field-street">
+                                                    <span>Street Address</span>
+                                                </label>
+                                        <input ng-model="property.address" class="input input-block input-jumbo lys-address-form__input" id="address-form-field-street"
+                                            name="street" autocomplete="off" value="South Road" placeholder="e.g. 11108 108th Avenue">
+                                    </div>
+                                    <div class="space-top-2 col-sm-12">
+                                        <label for="address-form-field-apt">
+                                                    <span>Apt, Suite, Bldg. (optional)</span>
+                                                </label>
+                                        <input ng-model="property.address2" class="input input-block input-jumbo lys-address-form__input" id="address-form-field-apt"
+                                            name="apt" autocomplete="off" placeholder="e.g. Suite #7" type="text">
+                                    </div>
+                                    <div class="space-top-2 col-sm-12 col-md-6">
+                                        <label for="address-form-field-city">
+                                                    <span>City</span>
+                                                </label>
+                                        <input ng-model="property.city" class="input input-block input-jumbo lys-address-form__input" id="address-form-field-city"
+                                            name="city" autocomplete="off" value="Garden Bay" placeholder="e.g. Edmonton" type="text">
+                                    </div>
+                                    <div class="space-top-2 col-sm-12 col-md-6">
+                                        <label for="address-form-field-state">
+                                                    <span>State</span>
+                                                </label>
+                                        <input ng-model="property.state" class="input input-block input-jumbo lys-address-form__input" id="address-form-field-state"
+                                            name="state" autocomplete="off" value="British Columbia" placeholder="e.g. Alberta"
+                                            type="text">
+                                    </div>
+                                    <div class="space-top-2 col-sm-12 col-md-6">
+                                        <label for="address-form-field-zipcode">
+                                                    <span >ZIP Code</span>
+                                                </label>
+                                        <input ng-model="property.zip" class="input input-block input-jumbo lys-address-form__input" id="address-form-field-zipcode"
+                                            name="zipcode" autocomplete="off" value="V0P" placeholder="e.g. T5H 3Z3" type="text">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="main-panel__actions-wrapper">
+                        <div class="centered-content clearfix">
+                            <div class="bg-white main-panel-outer-half clearfix shadowed">
+                                <div class="no-margin-padding__sm main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
+                                    <div class="divider hide-sm"></div>
+                                    <div class="row no-margin-padding__sm">
+                                        <div class="main-panel__actions col-sm-12 no-margin-padding__sm">
+                                            <div>
+                                                <a ui-sref="become-a-host.category" class="btn-progress-back link-icon va-container va-container-v pull-left text-gray link--accessibility-outline"
+                                                    href="#">
+                                                    <span class="icon hide-sm"></span>
+                                                    <span class="va-middle">
+                                                    <h5 class="text-normal">
+                                                        <span>Back</span>
+                                                    </h5>
+                                                    </span>
+                                                </a>
+                                                <a style="border-color: #ff5a5f;background-color: #ff5a5f;" ng-class="{'disabled' : !property.address || !property.city || !property.state || !property.address2 || !property.zip }" ng-disabled="!property.address || !property.city || !property.state || !property.address2 || !property.zip" ui-sref="become-a-host.bedrooms" class="btn btn-large btn-progress-next btn-large__next-btn pull-right-md btn-primary"
+                                                    href="#">
+                                                    <div class="btn-progress-next__text">
+                                                        <span>Next</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="waypoint-container">
+                        <span style="font-size:0;"></span>
+                    </div>
+
+                </div>
+
+                <div class="help-panel-container">
+                    <div class="hide-sm help-panel panel">
+                        <div class="panel-body">
+                            <div class="help-panel__bulb-img space-2"></div>
+                            <div class="help-panel__text">
+                                <div>
+                                    <p>
+                                        <span>Your exact address will only be shared with confirmed guests.</span>
+                                    </p>
+                                    <div class="tip-address-img">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show-sm help-panel__floating-container">
+                        <span class="tooltip-popup__transition-container">
+                            <div class="help-panel--collapsed help-panel__bulb-img-bubble">
+                                <div class="help-panel__bulb-img img-center">
+
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

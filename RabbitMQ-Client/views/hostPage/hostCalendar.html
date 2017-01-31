@@ -1,0 +1,103 @@
+<div class="bg-white list-your-space__progress">
+    <div class="full-backdrop"></div>
+    <div class="list-your-space__content">
+        <div class="centered-content clearfix">
+            <div class="main-panel-container no-padding-h bg-white col-sm-7 no-padding-h" tabindex="-1">
+                <div class="main-panel main-panel-padding main-panel-progress main-panel-inner-full space-sm-8">
+
+                    <div class="large-calendar-title row no-margin-padding va-container va-container-v va-container-h">
+                        <div class="va-middle">
+                            <h3 class="no-margin-padding">
+                                <span>Update your calendar</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="space-4">
+                        <div class="col-md-12" style="padding-left:0px">
+                            <h4>Available From</h4>
+                            <p class="input-group" style="width: 80%;">
+                                <input ng-model="property.availability_from" style="height: 40px;" type="text" class="form-control" uib-datepicker-popup="{{format}}" is-open="popup1.opened"
+                                    datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"/>
+                                <span class="input-group-btn">
+                                    <button style="height: 40px;" type="button" class="btn btn-default" ng-click="open1()">
+                                        <i class="fa fa-calendar">
+
+                                        </i>
+                                    </button>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-md-12" style="padding-left:0px">
+                            <h4>Available To</h4>
+                            <p class="input-group" style="width: 80%;">
+                                <input ng-model="property.availability_to" style="height: 40px;" type="text" class="form-control" uib-datepicker-popup="{{format}}" is-open="popup2.opened"
+                                    datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                                <span class="input-group-btn">
+                                    <button style="height: 40px;" type="button" class="btn btn-default" ng-click="open2()">
+                                        <i class="fa fa-calendar">
+
+                                        </i>
+                                    </button>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="main-panel__actions-wrapper">
+                    <div class="centered-content clearfix">
+                        <div class="bg-white main-panel-outer-half clearfix shadowed">
+                            <div class="no-margin-padding__sm main-panel-padding main-panel-progress pull-right main-panel-inner-half space-sm-8">
+                                <div class="divider hide-sm">
+
+                                </div>
+                                <div class="row no-margin-padding__sm">
+                                    <div class="main-panel__actions col-sm-12 no-margin-padding__sm">
+                                        <div>
+                                            <a ui-sref="become-a-host" class="btn-progress-back link-icon va-container va-container-v pull-left text-gray link--accessibility-outline"
+                                                href="#">
+                                                <span class="icon hide-sm">
+
+                                                </span>
+                                                <span class="va-middle">
+                                                    <h5 class="text-normal">
+                                                        <span>Back</span>
+                                                    </h5>
+                                                </span>
+                                            </a>
+                                            <a style="border-color: #ff5a5f;background-color: #ff5a5f;" ng-class="{'disabled' : !property.availability_from || !property.availability_to}" ng-disabled="!property.availability_from || !property.availability_to" ui-sref="become-a-host.choose-pricing-mode" class="btn btn-large btn-progress-next btn-large__next-btn pull-right-md btn-primary" href="#">
+                                                <div class="btn-progress-next__text">
+                                                    <span>Next</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="help-panel-container">
+                <div class="hide-sm help-panel panel" data-reactid=".2dy8bd2t43k.1.4.0.1.0">
+                    <div class="panel-body" data-reactid=".2dy8bd2t43k.1.4.0.1.0.0">
+                        <div class="help-panel__bulb-img space-2" data-reactid=".2dy8bd2t43k.1.4.0.1.0.0.0"></div>
+                        <div class="help-panel__text" data-reactid=".2dy8bd2t43k.1.4.0.1.0.0.1">
+                            <div data-reactid=".2dy8bd2t43k.1.4.0.1.0.0.1.0">
+                                <p class="space-3" data-reactid=".2dy8bd2t43k.1.4.0.1.0.0.1.0.0"><span data-reactid=".2dy8bd2t43k.1.4.0.1.0.0.1.0.0.0">Guests will see your calendar and book available days.</span></p>
+                                <hr class="space-3" data-reactid=".2dy8bd2t43k.1.4.0.1.0.0.1.0.1">
+                                <div class="clearfix" data-reactid=".2dy8bd2t43k.1.4.0.1.0.0.1.0.2">
+                                    <div class="pull-left calendar-image__tip-click-drag" data-reactid=".2dy8bd2t43k.1.4.0.1.0.0.1.0.2.0"></div>
+                                    <div class="calendar-tip-text" data-reactid=".2dy8bd2t43k.1.4.0.1.0.0.1.0.2.1"><span data-reactid=".2dy8bd2t43k.1.4.0.1.0.0.1.0.2.1.0">Click and drag to block days when you don’t want guests.</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-sm help-panel__floating-container" data-reactid=".2dy8bd2t43k.1.4.0.1.1">
+                    <noscript data-reactid=".2dy8bd2t43k.1.4.0.1.1.0"></noscript><span class="tooltip-popup__transition-container" data-reactid=".2dy8bd2t43k.1.4.0.1.1.1"><div class="help-panel--collapsed help-panel__bulb-img-bubble" data-reactid=".2dy8bd2t43k.1.4.0.1.1.1.$=1$collapsed"><div class="help-panel__bulb-img img-center" data-reactid=".2dy8bd2t43k.1.4.0.1.1.1.$=1$collapsed.0"></div></div><noscript data-reactid=".2dy8bd2t43k.1.4.0.1.1.1.$=11"></noscript></span></div>
+            </div>
+        </div>
+    </div>
+</div>

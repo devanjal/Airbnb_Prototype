@@ -1,0 +1,147 @@
+<style type="text/css">
+  #panel-border {
+    margin-bottom: 24px;
+    border: 1px solid #dce0e0;
+    background-color: #fff;
+    border-radius: 0;
+    margin-left: 20px;
+  }
+  
+  .panel-body {
+    border-top: none !important;
+  }
+</style>
+
+<div class="panel space-4">
+  <div class="panel-header">Profile Photo</div>
+  <br>
+  <div class="panel-body photos-section">
+    <div class="col-lg-4 text-center">
+      <div class="profile_pic_container picture-main space-sm-2 space-md-2">
+        <div class="media-photo profile-pic-background">
+          <img alt="Display Photo" height="225" src="https://a2.muscache.com/defaults/user_pic-225x225.png?v=2" width="225" />
+        </div>
+        <div class="media-photo media-round">
+          <img ngf-src="profileImage" alt="Display Photo" height="225" width="225" />
+        </div>
+        <!--  <button class="picture-tile-delete overlay-btn" data-behavior="tooltip" aria-label="Delete">
+          <i class="icon icon-trash"></i>
+        </button> -->
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <ul class="list-layout picture-tiles clearfix ui-sortable"></ul>
+      <p style="margin: 0;padding: 0;color: black;margin-bottom: 15px;">
+        Clear frontal face photos are an important way for hosts and guests to learn about each other. It’s not much fun to host
+        a landscape! Please upload a photo that clearly shows your face.
+      </p>
+
+      <div class="row row-condensed">
+        <div class="col-md-6 space-sm-2 js-take-photo">
+          <button class="btn btn-block btn-large">
+            Take a photo with your webcam
+          </button>
+        </div>
+        <div class="col-md-6">
+          <!--<input class="input-file" id="photo-image" name="image" type="file" ngf-select="upload_profile_image($files)" ngf-multiple="true" ngf-max-size="1MB"
+                ngf-pattern="'image/*" accept="image/*" />
+          <span class="btn btn-block btn-large file-input-container" for="photo-image">
+            Upload a file from your computer
+          </span>-->
+          <span class="btn btn-block btn-large file-input-container">
+                Upload a file from your computer
+              <form accept-charset="UTF-8" action="https://www.airbnb.com/users/ajax_image_upload" enctype="multipart/form-data" id="ajax_upload_form" method="post" name="ajax_upload_form" target="upload_frame">
+                  <input id="user_id" name="user_id" type="hidden" value="104718448">
+                  <input id="callback" name="callback" type="hidden" value="EditProfile">
+                  <!--<input id="user_profile_pic" name="user[profile_pic]" type="file">-->
+                  <!--ngf-select="upload_profile_pic($files)"-->
+                  <input id="user_profile_pic" name="user_profile_pic" type="file" ngf-select="upload_profile_pic($files)" ngf-max-size="1MB"
+                ngf-pattern="'image/*" accept="image/*" />
+              </form>              
+              <iframe id="upload_frame" name="upload_frame" style="display:none;"></iframe>
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+
+<!-- My Symbol-->
+<div class="panel space-4">
+  <div class="panel-header">
+    My Symbol
+  </div>
+  <div class="panel-body">
+    <div class="row space-top-4 row-table">
+      <div class="col-md-6 col-middle">
+        <div class="user-profile-symbol" data-user-id="104394830">
+          <img src="https://a0.muscache.com/airbnb/static/profile/symbol-empty-state-d97ee7a003fdab31cfaa9b20bd3a27ff.png" data-default-url="https://a0.muscache.com/airbnb/static/profile/symbol-empty-state-d97ee7a003fdab31cfaa9b20bd3a27ff.png"
+            data-base-url="https://create.airbnb.com/" data-src-url="https://create.airbnb.com/104394830/symbol" alt="Varsha"
+            class="img-responsive">
+        </div>
+      </div>
+      <div class="col-md-6 col-middle">
+        <p>
+        </p>
+        <h4>Create Your Symbol</h4>
+        Create Airbnb lets you make your own symbol of belonging to represent your home, your adventures, your story. Share your
+        experiences, join the community, and bring your symbol to life.
+        <p></p>
+        <a href="">
+          Create New
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Profile Video-->
+<div class="panel hide-sm">
+  <div class="panel-header">
+    Profile Video
+  </div>
+  <div class="panel-body">
+    <a name="video-profile"></a>
+    <div id="video-container" class="row">
+      <div class="col-lg-7 space-md-4">
+        <div id="parent-video-container" class="panel panel-dark video col-middle text-center placeholder">
+          <div class="placeholder-content" style="padding-top:30%">
+            <h4>
+              You haven’t recorded a video profile yet.
+            </h4>
+            <i class="icon icon-video icon-size-3"></i>
+          </div>
+          <video id="video_profile" class="video-js vjs-default-skin vjs-big-play-centered" width="400" height="120px">
+          </video>
+        </div>
+      </div>
+      <div class="video-profile-tips col-lg-5">
+        <h3>Video Checklist</h3>
+        <ul id="video-checklist" class="checklist">
+          <li>We love close-ups, but we suggest you sit at arm’s length.</li>
+          <li>You’ve got 30 seconds, so do your best to be concise.</li>
+          <li>Try to keep the light in front of you, not behind you.</li>
+          <li>Look into the camera to create that personal connection.</li>
+          <li>You’ll get a chance to preview your video before it uploads.</li>
+        </ul>
+        <div class="col-12 text-center">
+          <button class="btn btn-primary" id="toggle-video-record">
+            <span class="record">Record a new video</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="video-talking-points space-top-2">
+    <h3>Tell the community a little bit about yourself</h3>
+    <p>Start with your name and answer some of the following questions, or make up some of your own!</p>
+    <ul>
+      <li>Where are you from?</li>
+      <li>What are some of your interests</li>
+      <li>What do you do in your spare time?</li>
+      <li>What is a fun fact about yourself?</li>
+      <li>What are some of your favorite things?</li>
+    </ul>
+  </div>
+</div>

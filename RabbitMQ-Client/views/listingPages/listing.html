@@ -1,0 +1,179 @@
+<div class="page-container-responsive space-top-4 space-4" ng-controller="listingController">
+    <div class="row">
+        <div class="col-md-3 space-sm-3">
+            <ul class="sidenav-list">
+                <li ng-repeat="menu in listingMenus">
+                    <a ng-click="selectListingMenu($index)" aria-selected="{{$index == selectedListingMenu}}" ng-class="{'active': $index == selectedListingMenu}" href="#" ui-sref="{{menu.link}}" aria-selected="true" class="sidenav-item">
+                        {{menu.name}}
+                    </a>
+                </li>
+                <div class="space-top-4 space-4">
+                    <a ui-sref="become-a-host" class="btn btn-host" href="#">Add New Listings</a>
+                </div>
+            </ul>
+        </div>
+
+        <div class="col-md-9" ng-controller="listingController">
+           <div ui-view>
+            <div id="listings-container">
+                <div>
+                    <div class="suspension-container">
+                        <div class="panel space-4" ng-show="inProgress_property.length>0">
+                            <div class="panel-header active-panel-header">
+                                <div class="active-panel-padding">In progress</div>
+                            </div>
+                            <ul class="list-unstyled list-layout">
+                                <li class="listing panel-body" ng-repeat="property in inProgress_property">
+                                    <div class="row row-table">
+                                        <i class="icon icon-size-1 icon-remove icon-remove-listing show-sm"></i>
+                                        <div class="col-middle space-sm-2 space-top-sm-4 col-md-5 listing-photo">
+                                            <a href="#">                                                        <!-- manage your properties-->
+                                                <div class="media-photo media-photo-block-lg">
+                                                    <div class="media-cover text-center" style="position: relative;">
+                                                        <img style="height: 130px;width: 130px;" class="img-responsive-height" ngf-src="property.images[0]">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-10 col-lg-7 col-middle">
+                                            <div class="row row-table">
+                                                <div class="col-lg-10">
+                                                    <div class="listing-progress">
+                                                        <div class="progress progress-bar__lean" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="7">
+                                                            <uib-progressbar animate="false" value="property.dynamic" type="success"></uib-progressbar>
+                                                        </div>
+                                                        <div class="text-babu space-top-1">
+                                                            <span>You’re {{property.dynamic}}% done with your listing.</span>
+                                                        </div>
+                                                        <div class="space-top-2">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <span class="h4">
+                                                    <a href="#" class="text-normal">
+                                                        <span>{{property.title}}</span>
+                                                    </a>
+                                                </span>
+                                            <!--<div class="text-muted text-grey space-top-1 last-modified-date">
+                                                <span>Last updated on {{property.posting_date}}</span>
+                                            </div>-->
+                                            <div class="space-top-4">
+                                                <a ng-click="finish_listing($index)" class="btn btn__first-btn btn-primary" href="#">
+                                                    <span>Finish the Listing</span>
+                                                </a>
+                                                <a ui-sref="users.trips.preview({id:{{property.propertyid}}})" class="btn btn__second-btn" href="#">
+                                                    <span>Preview</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel space-4">
+                            <div class="panel-header active-panel-header">
+                                <div class="active-panel-padding">Listed</div>
+                            </div>
+                            <h5 style="margin-left: 20px;font-weight: normal;" ng-hide="listed_property.length>0">No Property Listed. <br><br> Please click on "Add New Listings" to list your property.</h5>
+                            <ul class="list-unstyled list-layout">
+                                <li ng-repeat="property in listed_property" class="listing panel-body">
+                                    <div class="row row-table">
+                                        <div class="col-middle space-sm-2 space-top-sm-4 col-md-5 listing-photo">
+                                            <a href="#">                                                        <!-- manage your properties-->
+                                                <div class="media-photo media-photo-block-lg">
+                                                    <div class="media-cover text-center" style="position: relative;">
+                                                        <img style="height: 130px;width: 130px;" class="img-responsive-height" ngf-src="property.images[0]">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-10 col-lg-7 col-middle">
+                                            <div class="row row-table">
+                                                <div class="col-lg-10">
+
+                                                </div>
+                                            </div>
+                                            <span class="h4">
+                                                <a href="#" class="text-normal">
+                                                    <span>{{property.title}}</span>
+                                                </a>
+                                            </span>
+                                            <div class="text-normal space-top-2">{{property.location}}</div>
+                                            <div class="text-muted text-grey space-top-1 last-modified-date">
+                                                <span>Last updated on {{property.posting_date}}</span>
+                                            </div>
+                                            <div class="space-top-4">
+                                                <a class="btn btn__first-btn" href="#">
+                                                    <span>Calendar and More</span>
+                                                </a>
+                                                <a class="btn btn__second-btn" href="#">
+                                                    <span>Preview</span>
+                                                </a>
+                                                <a href="#" id="ib-toggle-16133843" class="ib-toggle link-reset" data-ib-enabled="true">
+                                                    <i class="icon icon-bolt h3 icon-beach"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--<div class="panel space-4">
+                            <div class="panel-header active-panel-header">
+                                <div class="active-panel-padding">Unlisted</div>
+                            </div>
+                            <ul class="list-unstyled list-layout">
+                                <li class="listing panel-body">
+                                    <div class="row row-table">
+                                        <div class="col-middle space-sm-2 space-top-sm-4 col-md-5 listing-photo">
+                                            <a href="#">                                                        
+                                                <div class="media-photo media-photo-block-lg">
+                                                    <div class="media-cover text-center">
+                                                        <img class="img-responsive-height" src="#" >
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-10 col-lg-7 col-middle">
+                                            <div class="row row-table">
+                                                <div class="col-lg-10">
+
+                                                </div>
+                                            </div>
+                                            <span class="h4">
+                                                <a href="#" class="text-normal">
+                                                    <span>{{property.title}}</span>
+                                                </a>
+                                            </span>
+                                            <div class="text-normal space-top-2">{{property.location}}</div>
+                                            <div class="text-muted text-grey space-top-1 last-modified-date">
+                                                <span>Last updated on {{property.posting_date}}</span>
+                                            </div>
+                                            <div class="unlisted-listing-action__toggle-button">
+                                                <div id="hosting_id_16133806" class="activation-notification availability-select space-top-4">                                                <i class="dot space-top-2 dot-align-top dot-danger dot-red"></i>&nbsp;
+                                                    <div class="select">
+                                                        <select>
+                                                            <option value="listed">Listed</option>
+
+                                                            <option value="unlisted" selected="selected">Unlisted</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="btn unlisted-listing-action__preview-button" href="#">
+                                                <span>Preview</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</div>

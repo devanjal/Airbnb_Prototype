@@ -1,0 +1,160 @@
+div#lys-redesign-div
+{
+    min-height: calc(100vh - 62px);
+    position: relative;
+    box-sizing: border-box;
+}
+
+div.landing-width.bg-white.row.row-condensed.list-your-space__landing-content
+{
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+div.col-md-7.landing__left-col.fast-animation
+{
+    min-height: calc(100vh - 62px);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+div.landing__left-col-content
+{
+    margin: 58px 93.5px 100px 100px;
+    max-width: 470px;
+    box-sizing: border-box;
+}
+div.landing-step-collection.step-collection-completed
+{
+    color: #767676;
+    line-height: 1.5;
+    transition-duration: .25s;
+}
+div.landing__step-content
+{
+    transition-delay: 0ms;
+    transition: opacity .25s ease;
+}
+hr
+{
+    margin: 30px 0;
+    border-color: #f5f5f5;
+    border: 0;
+    border-top: 1px solid #dce0e0;
+    height: 0;
+}
+div.row.row-condensed.lys-vertical-align-middle-container
+{
+    position: relative;
+    margin-left: -6px;
+    margin-right: -6px;
+    -webkit-box-sizing: border-box;
+}
+div.va-middle
+{
+    -webkit-box-sizing: border-box;
+}
+
+strong.landing__step-number.text-base.text-branding.text-light-gray
+{
+    display: block;
+    font-size: 14px;
+    color: #bbb;
+    text-transform: uppercase;
+    font-weight: bold;
+    -webkit-box-sizing: border-box;
+}
+div.h3.landing__step-content-title.landing__subtitle-width
+{
+    max-height: 0;
+    visibility: hidden;
+    font-size: 24px;
+    color: #484848;
+    line-height: 1.25;
+    max-width: 430px;
+    font-weight: normal;
+    text-rendering: optimizelegibility;
+    -webkit-box-sizing: border-box;
+}
+
+div.col-sm-2.lys-vertical-align-middle
+{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 16.66667%;
+    float: left;
+    min-height: 1px;
+    box-sizing: border-box;
+}
+div.landing-step-collection
+{
+    color: #767676;
+    line-height: 1.5;
+    transition-duration: 0.25s;
+    box-sizing: border-box;
+}
+div.col-md-5.landing__right-col
+{
+    min-height: calc(100vh - 62px);
+}
+div.landing__animation.hide-sm.lys-vertical-align-middle-container
+{
+    min-height: calc(100vh - 61px);
+    overflow: hidden;
+    position: relative;
+}
+div.landing__svg-container.lys-vertical-align-middle
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+div.landing__more-info-card
+{
+    position: absolute;
+    bottom: 22px;
+    right: 22px;
+    z-index: 101;
+    max-width: 350px;
+    margin: 0 auto;
+}
+div.wmpw-panel
+{
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.09);
+}
+div.help-panel__bulb-img.space-2
+{
+    margin-top:0;
+    margin-bottom: 14px;
+    background-repeat: no-repeat;
+    background-image: url(https://a0.muscache.com/airbnb/static/list_your_space/tip-icon-73f3ef1d10a9545bfd15fd266803da48.png);
+    width: 22px;
+    height: 31px;
+}
+div.landing__step-content.landing__wmpw-controls
+{
+    max-width: 385px;
+}
+select
+{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 0;
+    display: block;
+    width: 100%;
+    transition: border-color 0.2s;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    background-color: #fff;
+    color: #484848;
+    line-height: normal;
+    text-transform: none;
+    margin:0;
+    box-sizing:border-box;
+}

@@ -1,0 +1,94 @@
+/*Top Css*/
+div#lys-redesign-div
+{
+    min-height: calc(100vh - 62px);
+    position: relative;
+    box-sizing: border-box;
+}
+div.landing-width.bg-white.row.row-condensed.list-your-space__landing-content
+{
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+div.col-md-7.landing__left-col.readyToPublish.fast-animation
+{
+    min-height: calc(100vh - 62px);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.landing__left-col.readyToPublish:not(.readyToPublish-animation-enter) .landing__left-col-content, .landing__left-col.readyToPublish-animation-enter-active .landing__left-col-content
+{
+    margin-top: 58px;
+}
+.landing__left-col-content
+{
+    margin: 58px 93.5px 100px 100px;
+    max-width: 470px;
+}
+.space-5
+{
+    margin-bottom: 30px;
+}
+.landing__left-col.readyToPublish:not(.readyToPublish-animation-enter) .landing__title-title, .landing__left-col.readyToPublish-animation-enter-active .landing__title-title
+{
+    font-size: 32px;
+}
+.landing__publish-button-section
+{
+    margin-top: 23px;
+}
+.text-large
+{
+    font-size: 16px;
+}
+.edit-left-padding
+{
+    padding-left: 26px;
+}
+.component_mbfsxg-o_O-component_button_r21s1q
+{
+    color: #008489 !important;
+    font: inherit !important;
+    font-family: Circular !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    border: 0px !important;
+    cursor: pointer !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    text-align: left !important;
+    -moz-appearance: none !important;
+}
+.landing__right-col
+{
+    min-height: calc(100vh - 62px);
+}
+.col-md-5
+{
+    width: 41.66667%;
+    float: left;
+    position: relative;
+}
+.landing__animation
+{
+    min-height: calc(100vh - 61px);
+    overflow: hidden;
+}
+.lys-vertical-align-middle-container
+{
+    position: relative;
+}
+.landing__animation .landing__svg-container
+{
+    width: 100%;
+}
+.lys-vertical-align-middle
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}

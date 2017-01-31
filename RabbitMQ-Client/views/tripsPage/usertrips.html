@@ -1,0 +1,178 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<link rel="stylesheet" href="../../public/css/listing.css">-->
+    <!--<link rel="stylesheet" href="../../public/css/airbnb.css">-->
+    <!--<link rel="stylesheet" href="../../public/css/airbnb2.css">-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--ng-init="getUserTrips()"-->
+<div ui-view>
+    <div class="page-container-responsive space-top-4 space-4" ng-controller="tripController">
+        <div class="row">
+            <div class="col-md-3 space-sm-3">
+                <ul class="sidenav-list">
+                    <li>
+                        <a class="sidenav-item" href="#" aria-selected="true">Your trips</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-9">
+                <div class="your-listings-flash-container"></div>
+                <div id="listings-container">
+                    <div>
+                        <div class="suspension-container">
+                            <div class="panel space-4">
+                                <div class="panel-header active-panel-header">
+                                    <div class="active-panel-padding">Requested Trips</div>
+                                </div>
+                                <h5 style="margin-left: 20px;font-weight: normal;" ng-hide="pendingtrips.length>0">No Requested trips.</h5>
+                                <ul class="list-unstyled list-layout">
+                                    <li class="listing panel-body" ng-repeat="trip in pendingtrips">
+                                        <div class="row row-table">
+                                            <div class="col-middle space-sm-2 space-top-sm-4 col-md-5 listing-photo">
+                                                <div class="media-photo media-photo-block-lg">
+                                                    <div class="media-cover text-center" style="position: relative;">
+                                                        <img style="height:130px;width:130px" class="img-responsive-height" src="{{trip.images[0]}}" alt="Image">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-10 col-lg-7 col-middle">
+                                                <div class="row row-table">
+                                                    <div class="col-lg-10">
+                                                        <span class="h4">
+                                                            <span style="font-weight: bold; font-size: larger">{{trip.title}}</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-table space-top-1">
+                                                    <div class="text-grey col-lg-2 col-md-2">
+                                                        <span style="font-weight: bold">Location:</span>
+                                                    </div>
+                                                    <div class="text-grey last-modified-date col-lg-8 col-lg-offset-2 col-md-offset-2">
+                                                        <span>{{trip.address}}, {{trip.city}} {{trip.state}}-{{trip.zipcode}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-table space-top-1">
+                                                    <div class="text-grey col-lg-4 col-md-4">
+                                                        <span style="font-weight: bold">Number of guests:</span>
+                                                    </div>
+                                                    <div class="text-grey last-modified-date col-lg-8">
+                                                        <span>{{trip.quantity}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-table space-top-1">
+                                                    <div class="text-grey col-lg-4 col-md-4">
+                                                        <span style="font-weight: bold">Price:</span>
+                                                    </div>
+                                                    <div class="text-grey last-modified-date col-lg-8">
+                                                        <span>$ {{trip.price}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-table space-top-1">
+                                                    <div class="col-sm-10 col-md-5 col-lg-5 text-grey space-top-1 last-modified-date">
+                                                        <span style="font-weight: bold">From:</span> <span>{{trip.fromdate.split("T")[0]}}</span>
+                                                    </div>
+                                                    <div class="col-sm-10 col-md-5 col-lg-5 text-grey space-top-1 last-modified-date">
+                                                        <span style="font-weight: bold">To: </span><span>{{trip.todate.split("T")[0]}}</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="space-top-4">
+                                                    <a ui-sref="users.trips.edit({id:{{trip.tripid}}})" class="btn btn__first-btn btn-primary" href="#">
+                                                        <span>Edit</span>
+                                                    </a>
+                                                    <a ui-sref="users.trips.preview({id:{{trip.tripid}}})" class="btn btn__second-btn" href="#">
+                                                        <span>Preview</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="panel space-4">
+                                <div class="panel-header active-panel-header">
+                                    <div class="active-panel-padding">Upcoming Trips</div>
+                                </div>
+                                <h5 style="margin-left: 20px;font-weight: normal;" ng-hide="usertrips.length>0">No Upcoming trips.</h5>
+                                <ul class="list-unstyled list-layout">
+                                    <li class="listing panel-body" ng-repeat="trip in usertrips">
+                                        <div class="row row-table">
+                                            <div class="col-middle space-sm-2 space-top-sm-4 col-md-5 listing-photo">
+                                                <div class="media-photo media-photo-block-lg">
+                                                    <div class="media-cover text-center" style="position:relative">
+                                                        <img style="height: 130px;width: 130px;" class="img-responsive-height" src="{{trip.images[0]}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-10 col-lg-7 col-middle">
+                                                <div class="row row-table">
+                                                    <div class="col-lg-10">
+                                                        <span class="h4">
+                                                            <span style="font-weight: bold; font-size: larger">{{trip.title}}</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-table space-top-1">
+                                                    <div class="text-grey col-lg-2 col-md-2">
+                                                        <span style="font-weight: bold">Location:</span>
+                                                    </div>
+                                                    <div class="text-grey last-modified-date col-lg-8 col-lg-offset-2 col-md-offset-2">
+                                                        <span>{{trip.address}}, {{trip.city}} {{trip.state}}-{{trip.zipcode}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-table space-top-1">
+                                                    <div class="text-grey col-lg-4 col-md-4">
+                                                        <span style="font-weight: bold">Number of guests:</span>
+                                                    </div>
+                                                    <div class="text-grey last-modified-date col-lg-8">
+                                                        <span>{{trip.quantity}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-table space-top-1">
+                                                    <div class="text-grey col-lg-4 col-md-4">
+                                                        <span style="font-weight: bold">Price:</span>
+                                                    </div>
+                                                    <div class="text-grey last-modified-date col-lg-8">
+                                                        <span>$ {{trip.price}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row row-table">
+                                                    <div class="col-sm-10 col-md-5 col-lg-5 text-grey space-top-1 last-modified-date">
+                                                        <span style="font-weight: bold">From: </span>
+                                                        <span>{{trip.fromdate.split("T")[0]}}</span>
+                                                    </div>
+                                                    <div class="col-sm-10 col-md-5 col-lg-5 text-grey space-top-1 last-modified-date">
+                                                        <span style="font-weight: bold">To: </span>
+                                                        <span>{{trip.todate.split("T")[0]}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="space-top-4">
+                                                    <a ng-click="cancelTrip()" class="btn btn__first-btn btn-primary" href="#">
+                                                        <span>Cancel trip</span>
+                                                    </a>
+                                                    <a ui-sref="users.trips.preview({id:{{trip.tripid}}})" class="btn btn__second-btn" href="#">
+                                                        <span>Preview</span>
+                                                    </a>
+                                                    <a ui-sref="users.trips.preview({id:{{trip.tripid}}})" id="ib-toggle-16133843" class="ib-toggle link-reset" data-ib-enabled="true">
+                                                        <i class="icon icon-bolt h3 icon-beach"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--</body>-->
+<!--</html>-->

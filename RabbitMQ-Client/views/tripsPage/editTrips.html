@@ -1,0 +1,108 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<link rel="stylesheet" href="../../public/css/airbnb.css">-->
+    <!--<link rel="stylesheet" href="../../public/css/airbnb2.css">-->
+    <!--<script src="../public/js/angular.js"></script>-->
+    <!--<script src="tripController.js"></script>-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<div class="page-container-responsive space-top-4 space-4" ng-controller="tripController">
+    <div class="row">
+        <div class="col-md-4 space-sm-3">
+            <div id="map1" style="width: 445px; height: 500px;"></div>
+        </div>
+        <div class="col-md-offset-2 col-md-6">
+            <div class="suspension-container">
+                <div class="panel space-4">
+                    <div class="panel-header active-panel-header">
+                        <div class="active-panel-padding">Edit your trip</div>
+                    </div>
+                    <ul class="list-unstyled list-layout">
+                        <li class="listing panel-body">
+                            <div class="row row-table">
+                                <div class="col-lg-10">
+                                    <span class="h4">
+                                        <span style="font-weight: bold; font-size: larger">{{editProperty.title}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row row-table space-top-1">
+                                <div class="text-grey col-lg-2 col-md-2">
+                                    <span style="font-weight: bold">Location:</span>
+                                </div>
+                                <div class="text-grey last-modified-date col-lg-8 col-lg-offset-2 col-md-offset-2">
+                                    <span>{{editProperty.address}}, {{editProperty.city}} {{editProperty.state}}-{{editProperty.zipcode}}</span>
+                                </div>
+                            </div>
+                            <div class="row row-table space-top-1">
+                                <div class="text-grey col-lg-4 col-md-4">
+                                    <span style="font-weight: bold">Price:</span>
+                                </div>
+                                <div class="text-grey last-modified-date col-lg-8">
+                                    <span>$ {{editProperty.price}}</span>
+                                </div>
+                            </div>
+
+                            <div class="row row-table">
+                                <div class="col-lg-4 col-md-4 text-grey space-top-1 last-modified-date">
+                                    <span style="font-weight: bold">Number of guests:</span>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input ng-model="editProperty.quantity" type="text" class="form-control" style="display: inline; height: 50%" />
+                                </div>
+                            </div>
+
+
+                            <div class="row row-table">
+                                <div class="col-lg-4 text-grey space-top-1 last-modified-date">
+                                    <span style="font-weight: bold">Booking From: </span>
+                                </div>
+                                <div class="col-lg-8 space-top-1">
+                                    <p class="input-group">
+                                        <input ng-model="checkinDate" style="height: 40px;" type="text" class="form-control" uib-datepicker-popup="{{format}}" is-open="popup1.opened"
+                                               datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats">
+                                        <span class="input-group-btn">
+                                            <button style="height: 40px;" type="button" class="btn btn-default" ng-click="open1()">
+                                            <i class="fa fa-calendar">
+                                            </i>
+                                            </button>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row row-table">
+                                <div class="col-lg-4 text-grey space-top-1 last-modified-date">
+                                    <span style="font-weight: bold">Booking Till: </span>
+                                </div>
+                                <div class="col-lg-8 space-top-1">
+                                    <p class="input-group">
+                                        <input ng-model="checkoutDate" style="height: 40px;" type="text" class="form-control" uib-datepicker-popup="{{format}}" is-open="popup2.opened"
+                                               datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                                        <span class="input-group-btn">
+                                            <button style="height: 40px;" type="button" class="btn btn-default" ng-click="open2()">
+                                                <i class="fa fa-calendar">
+
+                                                </i>
+                                            </button>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row row-table">
+                                <button ng-click="updateTrip()" class="btn btn__first-btn btn-primary" style="margin-left: 15px">
+                                    Submit
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--</body>-->
+<!--</html>-->
